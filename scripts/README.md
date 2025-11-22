@@ -2,9 +2,25 @@
 
 This directory contains scripts that replicate the functionality of the proof-of-concept notebooks, providing a more production-ready workflow.
 
+## Project Structure
+
+```
+scripts/
+├── synth_detector.py          # Main entry point (CLI)
+├── modules/                   # Modular components
+│   ├── __init__.py           # Package initialization
+│   ├── utils.py              # Utility functions
+│   ├── generator.py          # Synthetic code generation
+│   ├── rewriter.py           # Code rewriting
+│   ├── similarity.py         # Similarity computation
+│   ├── detector.py           # Detection and classification
+│   └── README.md             # Module documentation
+└── README.md                 # This file
+```
+
 ## Main Script: synth_detector.py
 
-The `synth_detector.py` script combines all the notebook functionality into a single command-line tool:
+The `synth_detector.py` script is the main entry point that orchestrates the entire pipeline. It uses a modular architecture where each step is implemented in a separate module under `modules/`.
 
 1. **Dataset Preparation** - Generates synthetic code from human-written samples
 2. **Code Rewriting** - Creates variations of each code sample
@@ -13,10 +29,91 @@ The `synth_detector.py` script combines all the notebook functionality into a si
 
 ### Features
 
+- Modular architecture for easy maintenance and testing
 - Continuous status messages throughout the process
 - Flexible pipeline execution (run full pipeline or individual steps)
 - Generates JSON output with similarity scores
 - Configurable parameters (number of rewrites, detection threshold, etc.)
+
+## Working with Individual Modules
+
+Each component of the pipeline is in a separate module, allowing you to work on them independently:
+
+### Generator Module (`modules/generator.py`)
+Handles synthetic code generation:
+
+```python
+from modules.generator import generate_synth_code, prepare_dataset
+
+# Generate a single synthetic code sample
+code = generate_synth_code(
+    prompt="Write a function to reverse a string",
+    model="codellama:7b-instruct",
+    temperature=0.7,
+    top_p=0.9
+)
+
+# Or prepare a full dataset
+prepare_dataset(
+    input_file="data/mbpp/data.json",
+    output_file="output/detection_data.json",
+    num_samples=10,
+    model="codellama:7b-instruct"
+)
+```
+
+### Rewriter Module (`modules/rewriter.py`)
+Handles code rewriting:
+
+```python
+from modules.rewriter import rewrite, rewrite_dataset
+
+# Rewrite a single code sample
+rewrites = rewrite(
+    code="def add(a, b):\n    return a + b",
+    n_samples=4,
+    temperature=0.8,
+    seed=42  # For reproducibility
+)
+
+# Or process an entire dataset
+rewrite_dataset(
+    input_file="output/detection_data.json",
+    output_file="output/rewritten_data.json",
+    n_rewrites=5
+)
+```
+
+### Similarity Module (`modules/similarity.py`)
+Handles similarity computation:
+
+```python
+from modules.similarity import compute_similarity, compute_similarities
+
+# Compute similarity for a single sample
+original = "def add(a, b):\n    return a + b"
+rewrites = ["def add(x, y):\n    return x + y", ...]
+score = compute_similarity(original, rewrites)
+
+# Or process an entire dataset
+compute_similarities(
+    input_file="output/rewritten_data.json",
+    output_file="output/similarity_data.json"
+)
+```
+
+### Detector Module (`modules/detector.py`)
+Handles classification:
+
+```python
+from modules.detector import predict_synth_code
+
+# Run detection on data with similarity scores
+results = predict_synth_code(data, threshold=0.85)
+print(f"Accuracy: {results['accuracy']:.2f}%")
+```
+
+See `modules/README.md` for detailed module documentation.
 
 ### Usage Examples
 
@@ -213,13 +310,33 @@ The script requires:
 ## Comparison with Notebooks
 
 The notebooks are preserved in their original locations:
-- `data/prepare_dataset.ipynb` → Corresponds to dataset preparation step
-- `detector/rewritter.ipynb` → Corresponds to code rewriting step
-- `detector/similarity.ipynb` → Corresponds to similarity computation step
-- `detector/detector.ipynb` → Corresponds to detection step
+- `data/prepare_dataset.ipynb` → `modules/generator.py`
+- `detector/rewritter.ipynb` → `modules/rewriter.py`
+- `detector/similarity.ipynb` → `modules/similarity.py`
+- `detector/detector.ipynb` → `modules/detector.py`
 
-The script provides the same functionality with:
-- Better status messages and progress tracking
-- Command-line interface for automation
-- Modular design for running individual steps
-- Easier integration into pipelines
+### Advantages of the Modular Script
+
+1. **Modular Architecture**: Each component in a separate file for easy maintenance
+2. **Reusability**: Import and use individual modules in other projects
+3. **Testing**: Test each module independently
+4. **Better Status Messages**: Continuous progress tracking
+5. **Command-Line Interface**: Automate with scripts and pipelines
+6. **Configurable**: All parameters exposed via CLI or Python API
+7. **Type Hints**: Better IDE support and code documentation
+8. **Production Ready**: Error handling and logging
+
+### When to Use Notebooks vs Scripts
+
+**Use Notebooks** for:
+- Exploratory analysis
+- Iterative development
+- Visualizations and inline results
+- Documentation with mixed code/text
+
+**Use Scripts** for:
+- Production workflows
+- Automated pipelines
+- Batch processing
+- Integration with other systems
+- When you need to work on specific modules independently

@@ -33,14 +33,22 @@ def clean_code(code: str) -> str:
     return code.strip()
 
 
-def generate_synth_code(prompt: str) -> str:
+def generate_synth_code(prompt: str, model: str = "codellama:7b-instruct",
+                        temperature: float = None, top_p: float = None) -> str:
     """Generate synthetic code using LLM based on a text prompt"""
+    options = {}
+    if temperature is not None:
+        options['temperature'] = temperature
+    if top_p is not None:
+        options['top_p'] = top_p
+
     response = ollama.chat(
-        model="codellama:7b-instruct",
+        model=model,
         messages=[
             {'role': 'system', 'content': "You are a code generation assistant. Generate only the Python function code, no explanations. Also, don't add comments to the code."},
             {'role': 'user', 'content': f"Write a Python function:\n{prompt}"}
         ],
+        options=options if options else None
     )
 
     pattern = r'```\n(.*?)```'
@@ -50,7 +58,8 @@ def generate_synth_code(prompt: str) -> str:
     return response['message']['content']
 
 
-def rewrite(code: str, n_samples: int = 4) -> List[str]:
+def rewrite(code: str, n_samples: int = 4, model: str = "codellama:7b-instruct",
+            temperature: float = 0.8, top_p: float = 0.95, seed: int = None) -> List[str]:
     """Generate n rewritten versions of the code"""
     cleaned_code = clean_code(code)
 
@@ -64,14 +73,16 @@ def rewrite(code: str, n_samples: int = 4) -> List[str]:
     rewrites = []
     for i in range(n_samples):
         try:
+            options = {
+                'temperature': temperature,
+                'top_p': top_p,
+                'seed': seed
+            }
+
             response = ollama.chat(
-                model="codellama:7b-instruct",
+                model=model,
                 messages=[{'role': 'user', 'content': prompt}],
-                options={
-                    'temperature': 0.8,
-                    'top_p': 0.95,
-                    'seed': None
-                }
+                options=options
             )
 
             content = response['message']['content']
@@ -105,7 +116,9 @@ def compute_similarity(original: str, rewrites: List[str]) -> float:
     return 1 - np.mean(distances)
 
 
-def prepare_dataset(input_file: str, output_file: str, num_samples: int = None):
+def prepare_dataset(input_file: str, output_file: str, num_samples: int = None,
+                   model: str = "codellama:7b-instruct", temperature: float = None,
+                   top_p: float = None):
     """
     Step 1: Prepare dataset by generating synthetic code
     Reads human-written code and generates synthetic versions
@@ -119,6 +132,7 @@ def prepare_dataset(input_file: str, output_file: str, num_samples: int = None):
         data = data[:num_samples]
 
     print_status(f"Loaded {len(data)} samples from {input_file}")
+    print_status(f"Generation settings: model={model}, temperature={temperature}, top_p={top_p}")
 
     # Clean data
     cleaned_data = [{
@@ -135,7 +149,8 @@ def prepare_dataset(input_file: str, output_file: str, num_samples: int = None):
         result.append(elem)
 
         print_status(f"Generating synthetic code {i}/{len(cleaned_data)}")
-        synth_code = generate_synth_code(elem['text'])
+        synth_code = generate_synth_code(elem['text'], model=model,
+                                        temperature=temperature, top_p=top_p)
 
         result.append({
             'text': elem['text'],
@@ -159,7 +174,9 @@ def prepare_dataset(input_file: str, output_file: str, num_samples: int = None):
     return result
 
 
-def rewrite_dataset(input_file: str, output_file: str, n_rewrites: int = 4):
+def rewrite_dataset(input_file: str, output_file: str, n_rewrites: int = 4,
+                   model: str = "codellama:7b-instruct", temperature: float = 0.8,
+                   top_p: float = 0.95, seed: int = None):
     """
     Step 2: Generate rewrites for each code sample
     Creates variations of each code to measure consistency
@@ -170,12 +187,14 @@ def rewrite_dataset(input_file: str, output_file: str, n_rewrites: int = 4):
         data = json.load(f)
 
     print_status(f"Loaded {len(data)} samples from {input_file}")
+    print_status(f"Rewrite settings: model={model}, n_rewrites={n_rewrites}, temperature={temperature}, top_p={top_p}, seed={seed}")
 
     data_with_rewrites = []
     for i, elem in enumerate(data, 1):
         print_status(f"Rewriting code sample {i}/{len(data)}")
 
-        elem['rewrites'] = rewrite(elem['code'], n_rewrites)
+        elem['rewrites'] = rewrite(elem['code'], n_samples=n_rewrites, model=model,
+                                  temperature=temperature, top_p=top_p, seed=seed)
         elem['code'] = clean_code(elem['code'])
         data_with_rewrites.append(elem)
 
@@ -261,11 +280,34 @@ Examples:
         """
     )
 
+    # General parameters
     parser.add_argument('--input', type=str, help='Input MBPP data file')
     parser.add_argument('--num-samples', type=int, help='Number of samples to process (default: all)')
     parser.add_argument('--output-dir', type=str, default='scripts', help='Output directory (default: scripts)')
-    parser.add_argument('--n-rewrites', type=int, default=4, help='Number of rewrites per sample (default: 4)')
-    parser.add_argument('--threshold', type=float, default=0.7, help='Detection threshold (default: 0.7)')
+
+    # LLM parameters
+    parser.add_argument('--model', type=str, default='codellama:7b-instruct',
+                       help='LLM model to use (default: codellama:7b-instruct)')
+
+    # Generation parameters (for synthetic code generation)
+    parser.add_argument('--gen-temperature', type=float,
+                       help='Temperature for synthetic code generation (default: None)')
+    parser.add_argument('--gen-top-p', type=float,
+                       help='Top-p for synthetic code generation (default: None)')
+
+    # Rewrite parameters
+    parser.add_argument('--n-rewrites', type=int, default=4,
+                       help='Number of rewrites per sample (default: 4)')
+    parser.add_argument('--rewrite-temperature', type=float, default=0.8,
+                       help='Temperature for code rewriting (default: 0.8)')
+    parser.add_argument('--rewrite-top-p', type=float, default=0.95,
+                       help='Top-p for code rewriting (default: 0.95)')
+    parser.add_argument('--rewrite-seed', type=int,
+                       help='Seed for code rewriting (default: None for random)')
+
+    # Detection parameters
+    parser.add_argument('--threshold', type=float, default=0.7,
+                       help='Detection threshold (default: 0.7)')
 
     # Pipeline options
     parser.add_argument('--full-pipeline', action='store_true', help='Run complete pipeline')
@@ -299,8 +341,12 @@ Examples:
             print("Error: --input required for full pipeline")
             return
 
-        data = prepare_dataset(args.input, detection_data_file, args.num_samples)
-        data = rewrite_dataset(detection_data_file, rewritten_data_file, args.n_rewrites)
+        data = prepare_dataset(args.input, detection_data_file, args.num_samples,
+                              model=args.model, temperature=args.gen_temperature,
+                              top_p=args.gen_top_p)
+        data = rewrite_dataset(detection_data_file, rewritten_data_file, args.n_rewrites,
+                              model=args.model, temperature=args.rewrite_temperature,
+                              top_p=args.rewrite_top_p, seed=args.rewrite_seed)
         data = compute_similarities(rewritten_data_file, similarity_data_file)
         predict_synth_code(data, args.threshold)
 
@@ -309,12 +355,16 @@ Examples:
         if not args.input:
             print("Error: --input required for dataset preparation")
             return
-        prepare_dataset(args.input, detection_data_file, args.num_samples)
+        prepare_dataset(args.input, detection_data_file, args.num_samples,
+                       model=args.model, temperature=args.gen_temperature,
+                       top_p=args.gen_top_p)
 
     # Rewrite only
     elif args.rewrite_only:
         input_file = args.detection_data or detection_data_file
-        rewrite_dataset(input_file, rewritten_data_file, args.n_rewrites)
+        rewrite_dataset(input_file, rewritten_data_file, args.n_rewrites,
+                       model=args.model, temperature=args.rewrite_temperature,
+                       top_p=args.rewrite_top_p, seed=args.rewrite_seed)
 
     # Similarity only
     elif args.similarity_only:

@@ -32,6 +32,22 @@ python scripts/synth_detector.py \
   --output-dir scripts
 ```
 
+With custom parameters:
+
+```bash
+python scripts/synth_detector.py \
+  --input data/mbpp/data.json \
+  --full-pipeline \
+  --num-samples 10 \
+  --model codellama:7b-instruct \
+  --gen-temperature 0.7 \
+  --gen-top-p 0.9 \
+  --n-rewrites 5 \
+  --rewrite-temperature 0.9 \
+  --rewrite-top-p 0.95 \
+  --threshold 0.85
+```
+
 #### Run Individual Steps
 
 **1. Prepare Dataset Only:**
@@ -48,6 +64,17 @@ python scripts/synth_detector.py \
   --detection-data scripts/detection_data.json \
   --rewrite-only \
   --n-rewrites 4
+```
+
+With custom rewrite parameters:
+```bash
+python scripts/synth_detector.py \
+  --detection-data scripts/detection_data.json \
+  --rewrite-only \
+  --n-rewrites 6 \
+  --rewrite-temperature 1.0 \
+  --rewrite-top-p 0.98 \
+  --rewrite-seed 42
 ```
 
 **3. Compute Similarities Only:**
@@ -67,10 +94,25 @@ python scripts/synth_detector.py \
 
 ### Command-Line Arguments
 
+**General Parameters:**
 - `--input`: Input MBPP data file (JSON format)
 - `--num-samples`: Number of samples to process (default: all)
 - `--output-dir`: Output directory for generated files (default: scripts)
+
+**LLM Parameters:**
+- `--model`: LLM model to use (default: codellama:7b-instruct)
+
+**Generation Parameters** (for synthetic code generation):
+- `--gen-temperature`: Temperature for synthetic code generation (default: None)
+- `--gen-top-p`: Top-p value for synthetic code generation (default: None)
+
+**Rewrite Parameters** (for code rewriting):
 - `--n-rewrites`: Number of rewrites per code sample (default: 4)
+- `--rewrite-temperature`: Temperature for code rewriting (default: 0.8)
+- `--rewrite-top-p`: Top-p value for code rewriting (default: 0.95)
+- `--rewrite-seed`: Seed for code rewriting (default: None for random)
+
+**Detection Parameters:**
 - `--threshold`: Detection threshold for classification (default: 0.7)
 
 **Pipeline Options:**
@@ -92,6 +134,37 @@ The script generates the following files in the output directory:
 1. **detection_data.json** - Balanced dataset of human and synthetic code
 2. **rewritten_data.json** - Code samples with their rewrites
 3. **similarity_data.json** - Final output with similarity scores
+
+### Parameter Tuning Guide
+
+Understanding the configurable parameters:
+
+**Temperature** (`--gen-temperature`, `--rewrite-temperature`):
+- Lower values (0.1-0.5): More deterministic, focused outputs
+- Medium values (0.6-0.8): Balanced creativity and consistency
+- Higher values (0.9-1.5): More creative and varied outputs
+- Use lower temperature for generation to make synthetic code more consistent
+- Use higher temperature for rewrites to create more diverse variations
+
+**Top-p** (`--gen-top-p`, `--rewrite-top-p`):
+- Controls nucleus sampling
+- Lower values (0.5-0.8): More focused, less diversity
+- Higher values (0.9-0.99): More diversity in output
+- Usually paired with temperature for better control
+
+**Number of Rewrites** (`--n-rewrites`):
+- More rewrites = more reliable similarity scores
+- Typical range: 3-10
+- Trade-off between accuracy and processing time
+
+**Detection Threshold** (`--threshold`):
+- Lower threshold: More sensitive, catches more synthetic code (higher false positives)
+- Higher threshold: More conservative, fewer false positives (higher false negatives)
+- Tune based on your precision/recall requirements
+
+**Seed** (`--rewrite-seed`):
+- Set for reproducible results
+- Leave unset (None) for varied outputs across runs
 
 ### Requirements
 

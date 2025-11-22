@@ -1,0 +1,1179 @@
+[
+  {
+    "code": "def find_missing(arr):\n    for i in range(len(arr) - 1):\n        if arr[i + 1] - arr[i] != 1:\n            return arr[i] + 1\n    return arr[-1] + 1",
+    "is_human": 0,
+    "rewrites": [
+      "def find_missing(arr):\n    for i in range(len(arr) - 1):\n        if arr[i + 1] - arr[i] != 1:\n            return arr[i] + 1\n    return arr[-1] + 1",
+      "def find_missing(arr):\n    for i in range(len(arr) - 1):\n        if arr[i + 1] - arr[i] != 1:\n            return arr[i] + 1\n    return arr[-1] + 1",
+      "def find_missing(arr):\n    for i in range(len(arr) - 1):\n        if arr[i + 1] - arr[i] != 1:\n            return arr[i] + 1\n    return arr[-1] + 1",
+      "def find_missing(arr):\n    for i in range(len(arr) - 1):\n        if arr[i + 1] - arr[i] != 1:\n            return arr[i] + 1\n    return arr[-1] + 1"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def multiply_num(numbers):  \n    total = 1\n    for x in numbers:\n        total *= x  \n    return total/len(numbers)",
+    "is_human": 1,
+    "rewrites": [
+      "def multiply_num(numbers):  \n    return sum(numbers) / len(numbers)",
+      "def multiply_num(numbers):  \n    total = 1\n    for x in numbers:\n        total *= x  \n    return total/len(numbers)",
+      "def multiply_num(numbers):\n    total = 1\n    for x in numbers:\n        total *= x\n    return total/len(numbers)",
+      "def multiply_num(numbers):\n    return sum(numbers) / len(numbers)"
+    ],
+    "similarity": 0.796582547246264
+  },
+  {
+    "code": "def find_Volume(l,b,h) : \n    return ((l * b * h) / 2)",
+    "is_human": 1,
+    "rewrites": [
+      "def find_Volume(l, b, h):\n    return (l * b * h) / 2",
+      "def find_Volume(l,b,h):\n    return (l * b * h) / 2",
+      "def find_Volume(l, b, h):\n    return (l * b * h) / 2",
+      "def find_Volume(l, b, h):\n    return (l * b * h) / 2"
+    ],
+    "similarity": 0.9479317851959361
+  },
+  {
+    "code": "def find_even_odd(my_list):\n    for i in range(len(my_list)):\n        if my_list[i] % 2 == 0:\n            even = my_list[i]\n        else:\n            odd = my_list[i]\n    return (even, odd)",
+    "is_human": 0,
+    "rewrites": [
+      "def find_even_odd(my_list):\n    return ([i for i in my_list if i % 2 == 0], [i for i in my_list if i % 2 != 0])",
+      "def find_even_odd(my_list):\n    for i in range(len(my_list)):\n        if my_list[i] % 2 == 0:\n            even = my_list[i]\n        else:\n            odd = my_list[i]\n    return (even, odd)",
+      "def find_even_odd(my_list):\n    even = None\n    odd = None\n    for i in range(len(my_list)):\n        if my_list[i] % 2 == 0:\n            even = my_list[i]\n        else:\n            odd = my_list[i]\n    return (even, odd)",
+      "def find_even_odd(my_list):\n    even = odd = None\n    for i in range(len(my_list)):\n        if my_list[i] % 2 == 0:\n            even = my_list[i]\n        else:\n            odd = my_list[i]\n    return (even, odd)"
+    ],
+    "similarity": 0.8573013447432762
+  },
+  {
+    "code": "def get_character(s):\n    return ''.join(sorted(s))",
+    "is_human": 0,
+    "rewrites": [
+      "def get_character(s):\n    return ''.join(sorted(s))",
+      "def get_character(s):\n    return ''.join(sorted(s))",
+      "def get_character(s):\n    return ''.join(sorted(s))",
+      "def get_character(s):\n    return ''.join(sorted(s))"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def is_undulating(n):\n    return n % 2 == 0 and n != 2",
+    "is_human": 0,
+    "rewrites": [
+      "def is_undulating(n):\n    return n % 2 == 0 and n != 2",
+      "def is_undulating(n):\n    return n % 2 == 0 and n != 2",
+      "def is_undulating(n):\n    return n % 2 == 0 and n > 2",
+      "def is_undulating(n):\n    return n % 2 == 0 and n != 2"
+    ],
+    "similarity": 0.9929906542056075
+  },
+  {
+    "code": "def is_non_prime(n):\n    if n <= 1:\n        return True\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+    "is_human": 0,
+    "rewrites": [
+      "def is_non_prime(n):\n    if n <= 1:\n        return True\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+      "def is_non_prime(n):\n    if n <= 1:\n        return True\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+      "def is_non_prime(n):\n    if n <= 1:\n        return True\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+      "def is_non_prime(n):\n    if n <= 1:\n        return True\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def power(a, b):\n    return a ** b",
+    "is_human": 0,
+    "rewrites": [
+      "def power(a, b):\n    return a ** b",
+      "def power(a, b):\n    return a ** b",
+      "def power(a, b):\n    return a ** b",
+      "def power(a, b):\n    return a ** b"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "import math\ndef is_not_prime(n):\n    result = False\n    for i in range(2,int(math.sqrt(n)) + 1):\n        if n % i == 0:\n            result = True\n    return result",
+    "is_human": 1,
+    "rewrites": [
+      "def is_not_prime(n):\n    result = False\n    for i in range(2, int(math.sqrt(n)) + 1):\n        if n % i == 0:\n            result = True\n    return result",
+      "def is_not_prime(n):\n    if n < 2:\n        return True\n    for i in range(2, int(math.sqrt(n)) + 1):\n        if n % i == 0:\n            return True\n    return False",
+      "def is_not_prime(n):\n    result = False\n    for i in range(2, int(math.sqrt(n)) + 1):\n        if n % i == 0:\n            result = True\n            break\n    return result",
+      "def is_not_prime(n):\n    for i in range(2, int(math.sqrt(n)) + 1):\n        if n % i == 0:\n            return True\n    return False"
+    ],
+    "similarity": 0.876435255074451
+  },
+  {
+    "code": "def recur_list_sum(my_list):\n    if not my_list:\n        return 0\n    else:\n        return my_list[0] + recur_list_sum(my_list[1:])",
+    "is_human": 0,
+    "rewrites": [
+      "def recur_list_sum(my_list):\n    if not my_list:\n        return 0\n    else:\n        return my_list[0] + recur_list_sum(my_list[1:])",
+      "def recur_list_sum(my_list):\n    \"\"\"Returns the sum of the elements in a list using recursion\"\"\"\n    if not my_list: \n        return 0\n    else: \n        return my_list[0] + recur_list_sum(my_list[1:])",
+      "def recur_list_sum(my_list):\n    if not my_list:\n        return 0\n    else:\n        return my_list[0] + recur_list_sum(my_list[1:])",
+      "def recur_list_sum(my_list):\n    if not my_list:\n        return 0\n    else:\n        return my_list[0] + recur_list_sum(my_list[1:])"
+    ],
+    "similarity": 0.9292168674698795
+  },
+  {
+    "code": "def decimal_to_binary(n): \n    return bin(n).replace(\"0b\",\"\")",
+    "is_human": 1,
+    "rewrites": [
+      "def decimal_to_binary(n): \n    return bin(n).replace(\"0b\",\"\")",
+      "def decimal_to_binary(n): \n    return bin(n).replace(\"0b\",\"\")",
+      "def decimal_to_binary(n):\n    return bin(n).replace(\"0b\",\"\")",
+      "def decimal_to_binary(n):\n    return bin(n).replace(\"0b\", \"\")"
+    ],
+    "similarity": 0.993835523641783
+  },
+  {
+    "code": "def div_even_odd(list1):\n    first_even = next((el for el in list1 if el%2==0),-1)\n    first_odd = next((el for el in list1 if el%2!=0),-1)\n    return (first_even/first_odd)",
+    "is_human": 1,
+    "rewrites": [
+      "def div_even_odd(list1):\n    first_even = next((el for el in list1 if el%2==0),-1)\n    first_odd = next((el for el in list1 if el%2!=0),-1)\n    return (first_even/first_odd) if first_even != -1 and first_odd != -1 else -1",
+      "def div_even_odd(list1):\n    first_even = next((el for el in list1 if el%2==0), -1)\n    first_odd = next((el for el in list1 if el%2!=0), -1)\n    return (first_even / first_odd)",
+      "def div_even_odd(list1):\n    first_even = next((el for el in list1 if el%2==0),-1)\n    first_odd = next((el for el in list1 if el%2!=0),-1)\n    return (first_even/first_odd) if first_even != -1 and first_odd != -1 else None",
+      "def div_even_odd(list1):\n    first_even = next((el for el in list1 if el%2==0),-1)\n    first_odd = next((el for el in list1 if el%2!=0),-1)\n    return (first_even/first_odd)"
+    ],
+    "similarity": 0.9351203477853224
+  },
+  {
+    "code": "def check_equal_length(tuples):\n    return len(set(map(len, tuples))) == 1",
+    "is_human": 0,
+    "rewrites": [
+      "def check_equal_length(tuples):\n    return len(set(map(len, tuples))) == 1",
+      "def check_equal_length(tuples):\n    return len(set(map(len, tuples))) == 1",
+      "def check_equal_length(tuples):\n    return len(set(map(len, tuples))) == 1",
+      "def check_equal_length(tuples):\n    return len(set(map(len, tuples))) == 1"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def count_squares(width, height):\n    return width * height",
+    "is_human": 0,
+    "rewrites": [
+      "def count_squares(width, height):\n    return width * height",
+      "def count_squares(width, height):\n    return width * height",
+      "def count_squares(width, height):\n    return max(width, height) ** 2",
+      "def count_squares(width, height):\n    return width * height"
+    ],
+    "similarity": 0.9744094488188977
+  },
+  {
+    "code": "def get_odd_element(my_list):\n    count = {}\n    for item in my_list:\n        if item not in count:\n            count[item] = 1\n        else:\n            count[item] += 1\n    for key, value in count.items():\n        if value % 2 == 1:\n            return key",
+    "is_human": 0,
+    "rewrites": [
+      "def get_odd_element(my_list):\n    count = {}\n    for item in my_list:\n        if item not in count:\n            count[item] = 1\n        else:\n            count[item] += 1\n    for key, value in count.items():\n        if value % 2 == 1:\n            return key",
+      "def get_odd_element(my_list):\n    return next((key for key, value in count.items() if value % 2 == 1), None)",
+      "def get_odd_element(my_list):\n    count = {}\n    for item in my_list:\n        if item not in count:\n            count[item] = 1\n        else:\n            count[item] += 1\n    for key, value in count.items():\n        if value % 2 == 1:\n            return key",
+      "def get_odd_element(my_list):\n    count = {}\n    for item in my_list:\n        if item not in count:\n            count[item] = 1\n        else:\n            count[item] += 1\n    for key, value in count.items():\n        if value % 2 == 1:\n            return key"
+    ],
+    "similarity": 0.8746575342465753
+  },
+  {
+    "code": "def find_sequences(s):\n    return [s[i:j+1] for i in range(len(s)) for j in range(i+1, len(s)) if s[i].islower() and s[j].islower() and s[i+1] == '_']",
+    "is_human": 0,
+    "rewrites": [
+      "def find_sequences(s):\n    return [s[i:j+1] for i in range(len(s)) for j in range(i+1, len(s)) if s[i].islower() and s[j].islower() and s[i+1] == '_']",
+      "def find_sequences(s):\n    return [s[i:j+1] for i in range(len(s)) for j in range(i+1, len(s)) if s[i].islower() and s[j].islower() and s[i+1] == '_']",
+      "def find_sequences(s):\n    return [s[i:j+1] for i in range(len(s)) for j in range(i+1, len(s)) if s[i].islower() and s[j].islower() and s[i+1] == '_' and j - i >= 2]",
+      "def find_sequences(s):\n    return [s[i:j+1] for i in range(len(s)) for j in range(i+1, len(s)) if s[i].islower() and s[j].islower() and s[i+1] == '_']"
+    ],
+    "similarity": 0.9880952380952381
+  },
+  {
+    "code": "def parallelogram_area(b,h):\n  area=b*h\n  return area",
+    "is_human": 1,
+    "rewrites": [
+      "def parallelogram_area(b, h):\n  return b*h",
+      "def parallelogram_area(b, h):\n  return b * h",
+      "def parallelogram_area(b, h):\n  return b * h",
+      "def parallelogram_area(b,h):\n  return b*h"
+    ],
+    "similarity": 0.7938802368940557
+  },
+  {
+    "code": "def can_rearrange_letters(input_string):\n    seen = set()\n    for char in input_string:\n        if char in seen:\n            return False\n        seen.add(char)\n    return True",
+    "is_human": 0,
+    "rewrites": [
+      "def can_rearrange_letters(input_string):\n    seen = set()\n    for char in input_string:\n        if char in seen:\n            return False\n        seen.add(char)\n    return len(seen) == len(input_string)",
+      "def can_rearrange_letters(input_string):\n    seen = set()\n    for char in input_string:\n        if char in seen:\n            return False\n        seen.add(char)\n    return True",
+      "def can_rearrange_letters(input_string):\n    seen = set()\n    for char in input_string:\n        if char in seen:\n            return False\n        seen.add(char)\n    return True",
+      "def can_rearrange_letters(input_string):\n    seen = set()\n    for char in input_string:\n        if char in seen:\n            return False\n        seen.add(char)\n    return len(seen) == len(input_string) / 2"
+    ],
+    "similarity": 0.9526441175655835
+  },
+  {
+    "code": "def similar_elements(list1, list2):\n    return [x for x in list1 if x in list2]",
+    "is_human": 0,
+    "rewrites": [
+      "def similar_elements(list1, list2):\n    return [x for x in list1 if x in list2]",
+      "def similar_elements(list1, list2):\n    return [x for x in list1 if x in list2]",
+      "def similar_elements(list1, list2):\n    return [x for x in list1 if x in list2]",
+      "def similar_elements(list1, list2):\n    return [x for x in list1 if x in list2]"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def square_perimeter(a):\n  perimeter=4*a\n  return perimeter",
+    "is_human": 1,
+    "rewrites": [
+      "def square_perimeter(a):\n    return 4*a",
+      "def square_perimeter(a):\n  perimeter=4*a\n  return perimeter",
+      "def square_perimeter(a):\n  return 4 * a",
+      "def square_length(a):\n    return a*a"
+    ],
+    "similarity": 0.7597744360902255
+  },
+  {
+    "code": "import re\ndef text_match(text):\n  patterns = '^[a-z]+_[a-z]+$'\n  if re.search(patterns,  text):\n    return ('Found a match!')\n  else:\n    return ('Not matched!')",
+    "is_human": 1,
+    "rewrites": [
+      "import re\ndef text_match(text):\n  patterns = '^[a-z]+_[a-z]+$'\n  if re.search(patterns,  text):\n    return ('Found a match!')\n  else:\n    return ('Not matched!')",
+      "import re\ndef text_match(text):\n  patterns = '^[a-z]+_[a-z]+$'\n  if re.search(patterns,  text):\n    return ('Found a match!')\n  else:\n    return ('Not matched!')",
+      "import re\ndef text_match(text):\n  return 'Found a match!' if re.search('^[a-z]+_[a-z]+$', text) else 'Not matched!'",
+      "import re\ndef text_match(text):\n  patterns = '^[a-z]+_[a-z]+$'\n  return 'Found a match!' if re.search(patterns, text) else 'Not matched!'"
+    ],
+    "similarity": 0.8381480400739227
+  },
+  {
+    "code": "def check_sublist(main_list, sublist):\n    return sublist in main_list",
+    "is_human": 0,
+    "rewrites": [
+      "def check_sublist(main_list, sublist):\n    return sublist in main_list",
+      "def check_sublist(main_list, sublist):\n    return sublist in main_list",
+      "def check_sublist(main_list, sublist):\n    return sublist in main_list",
+      "def check_sublist(main_list, sublist):\n    return sublist in main_list"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def sort_list(my_list):\n    return sorted(my_list, key=lambda x: (x if isinstance(x, int) else float('inf'), x))",
+    "is_human": 0,
+    "rewrites": [
+      "def sort_list(my_list):\n    return sorted(my_list, key=lambda x: (x if isinstance(x, int) else float('inf'), x))",
+      "def sort_list(my_list):\n    return sorted(my_list, key=lambda x: (x if isinstance(x, int) else float('inf'), x))",
+      "def sort_list(my_list):\n    return sorted(my_list, key=lambda x: (x if isinstance(x, int) else float('inf'), x))",
+      "def sort_list(my_list):\n    return sorted(my_list, key=lambda x: (x, float('inf') if isinstance(x, int) else x))"
+    ],
+    "similarity": 0.96875
+  },
+  {
+    "code": "def square_elements(my_list):\n    return [lambda x: x**2 for x in my_list]",
+    "is_human": 0,
+    "rewrites": [
+      "def square_elements(my_list):\n    return [x**2 for x in my_list]",
+      "def square_elements(my_list):\n    return [x**2 for x in my_list]",
+      "def square_elements(my_list):\n    return [lambda x: x**2 for x in my_list]",
+      "def square_elements(my_list):\n    return [x**2 for x in my_list]"
+    ],
+    "similarity": 0.9456521739130435
+  },
+  {
+    "code": "def calculate_area(base, height):\n    return base * height",
+    "is_human": 0,
+    "rewrites": [
+      "def calculate_area(base, height):\n    return base * height",
+      "def calculate_area(base, height):\n    return base * height",
+      "def calculate_area(base, height):\n    return base * height",
+      "def calculate_area(base, height):\n    return base * height"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "from collections import Counter\ndef frequency(lst):\n    count = Counter()\n    for sublist in lst:\n        count.update(sublist)\n    return count",
+    "is_human": 0,
+    "rewrites": [
+      "from collections import Counter\ndef frequency(lst):\n    count = Counter()\n    for sublist in lst:\n        count.update(sublist)\n    return count",
+      "from collections import Counter\ndef frequency(lst):\n    count = Counter()\n    for sublist in lst:\n        count.update(sublist)\n    return count",
+      "from collections import Counter\ndef frequency(lst):\n    count = Counter()\n    for sublist in lst:\n        count.update(sublist)\n    return count",
+      "from collections import Counter\ndef frequency(lst):\n    count = Counter()\n    for sublist in lst:\n        count.update(sublist)\n    return count"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def compute_Last_Digit(A,B): \n    variable = 1\n    if (A == B): \n        return 1\n    elif ((B - A) >= 5):  \n        return 0\n    else:   \n        for i in range(A + 1,B + 1): \n            variable = (variable * (i % 10)) % 10\n        return variable % 10",
+    "is_human": 1,
+    "rewrites": [
+      "def compute_Last_Digit(A, B):\n    if A == B:\n        return 1\n    elif (B - A) >= 5:\n        return 0\n    else:\n        variable = 1\n        for i in range(A + 1, B + 1):\n            variable = (variable * (i % 10)) % 10\n        return variable % 10",
+      "def compute_Last_Digit(A,B): \n    variable = 1\n    if (A == B): \n        return 1\n    elif ((B - A) >= 5):  \n        return 0\n    else:   \n        for i in range(A + 1,B + 1): \n            variable = (variable * (i % 10)) % 10\n        return variable % 10",
+      "def compute_Last_Digit(A,B):\n    if A == B:\n        return 1\n    elif (B - A) >= 5:\n        return 0\n    else:\n        for i in range(A + 1, B + 1):\n            variable = (variable * (i % 10)) % 10\n        return variable % 10",
+      "def compute_Last_Digit(A, B):\n    variable = 1\n    if (A == B):\n        return 1\n    elif ((B - A) >= 5):\n        return 0\n    else:\n        for i in range(A + 1, B + 1):\n            variable = (variable * (i % 10)) % 10\n        return variable % 10"
+    ],
+    "similarity": 0.7043321477968781
+  },
+  {
+    "code": "def remove_Occ(s,ch): \n    for i in range(len(s)): \n        if (s[i] == ch): \n            s = s[0 : i] + s[i + 1:] \n            break\n    for i in range(len(s) - 1,-1,-1):  \n        if (s[i] == ch): \n            s = s[0 : i] + s[i + 1:] \n            break\n    return s",
+    "is_human": 1,
+    "rewrites": [
+      "def remove_Occ(s, ch):\n    for i in range(len(s)):\n        if s[i] == ch:\n            s = s[0:i] + s[i+1:]\n    return s",
+      "def remove_Occ(s, ch):\n    return s.replace(ch, '')",
+      "def remove_Occ(s, ch):\n    while True:\n        i = s.find(ch)\n        if i == -1:\n            break\n        s = s[:i] + s[i+1:]\n    return s",
+      "def remove_Occ(s, ch):\n    for i in range(len(s)):\n        if s[i] == ch:\n            s = s[0 : i] + s[i + 1:]\n            break\n    for i in range(len(s) - 1, -1, -1):\n        if s[i] == ch:\n            s = s[0 : i] + s[i + 1:]\n            break\n    return s"
+    ],
+    "similarity": 0.5627849352773991
+  },
+  {
+    "code": "def decimal_To_Binary(N): \n    B_Number = 0\n    cnt = 0\n    while (N != 0): \n        rem = N % 2\n        c = pow(10,cnt)  \n        B_Number += rem*c  \n        N //= 2 \n        cnt += 1\n    return B_Number",
+    "is_human": 1,
+    "rewrites": [
+      "def decimal_To_Binary(N):\n    B_Number = ''\n    while N != 0:\n        rem = N % 2\n        B_Number += str(rem)\n        N //= 2\n    return ''.join(reversed(B_Number))",
+      "def decimal_To_Binary(N):\n    B_Number = 0\n    cnt = 0\n    while (N != 0):\n        rem = N % 2\n        c = pow(10,cnt)\n        B_Number += rem*c\n        N //= 2\n        cnt += 1\n    return B_Number",
+      "def decimal_To_Binary(n):\n    binary = \"\"\n    while n > 0:\n        binary += str(n % 2)\n        n //= 2\n    return binary[::-1]",
+      "def decimal_to_binary(n):\n    bin_num = ''\n    for i in range(n.bit_length()):\n        if n % 2 == 0:\n            bin_num += '0'\n        else:\n            bin_num += '1'\n        n //= 2\n    return bin_num"
+    ],
+    "similarity": 0.6206645661001216
+  },
+  {
+    "code": "def get_frequency_count(lst):\n    result = {}\n    for sublist in lst:\n        for item in sublist:\n            if item not in result:\n                result[item] = 1\n            else:\n                result[item] += 1\n    return result",
+    "is_human": 0,
+    "rewrites": [
+      "def get_frequency_count(lst):\n    result = {}\n    for sublist in lst:\n        for item in sublist:\n            if item not in result:\n                result[item] = 1\n            else:\n                result[item] += 1\n    return result",
+      "def get_frequency_count(lst):\n    result = {}\n    for sublist in lst:\n        for item in sublist:\n            if item not in result:\n                result[item] = 1\n            else:\n                result[item] += 1\n    return result",
+      "def get_frequency_count(lst):\n    result = {}\n    for sublist in lst:\n        for item in sublist:\n            if item not in result:\n                result[item] = 1\n            else:\n                result[item] += 1\n    return result",
+      "def get_frequency_count(lst):\n    result = {}\n    for sublist in lst:\n        for item in sublist:\n            if item not in result:\n                result[item] = 1\n            else:\n                result[item] += 1\n    return result"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def find_Product(arr,n): \n    arr.sort() \n    prod = 1\n    for i in range(0,n,1): \n        if (arr[i - 1] != arr[i]): \n            prod = prod * arr[i] \n    return prod;",
+    "is_human": 1,
+    "rewrites": [
+      "def find_product(arr):\n  arr.sort()\n  prod = 1\n  for i in range(len(arr)):\n    if (arr[i] != arr[i-1] and arr[i] != arr[i+1]):\n      prod *= arr[i]\n  return prod",
+      "def find_Product(arr,n): \n    arr.sort() \n    prod = 1\n    for i in range(0,n,1): \n        if (arr[i - 1] != arr[i]): \n            prod = prod * arr[i] \n    return prod;",
+      "def find_Product(arr,n): \n    arr.sort() \n    prod = 1\n    for i in range(0,n,1): \n        if (arr[i - 1] != arr[i]): \n            prod = prod * arr[i] \n    return prod;",
+      "def find_Product(arr, n):\n    arr.sort()\n    prod = 1\n    for i in range(0, n, 1):\n        if (arr[i - 1] != arr[i]):\n            prod = prod * arr[i]\n    return prod;"
+    ],
+    "similarity": 0.9364718614718615
+  },
+  {
+    "code": "def is_equilateral(triangle):\n    return all(side == triangle[0] for side in triangle)",
+    "is_human": 0,
+    "rewrites": [
+      "def is_equilateral(triangle):\n    return all(side == triangle[0] for side in triangle)",
+      "def is_equilateral(triangle):\n    return all(side == triangle[0] for side in triangle)",
+      "def is_equilateral(triangle):\n    return len(set(triangle)) == 1",
+      "def is_equilateral(triangle):\n    return all(side == triangle[0] for side in triangle)"
+    ],
+    "similarity": 0.9333333333333333
+  },
+  {
+    "code": "def get_frequency(my_list):\n    frequency = {}\n    for item in my_list:\n        if item not in frequency:\n            frequency[item] = 1\n        else:\n            frequency[item] += 1\n    return frequency",
+    "is_human": 0,
+    "rewrites": [
+      "def get_frequency(my_list):\n    frequency = {}\n    for item in my_list:\n        frequency[item] = frequency.get(item, 0) + 1\n    return frequency",
+      "def get_frequency(my_list):\n    frequency = {}\n    for item in my_list:\n        if item not in frequency:\n            frequency[item] = 1\n        else:\n            frequency[item] += 1\n    return frequency",
+      "def get_frequency(my_list):\n    return {item: my_list.count(item) for item in set(my_list)}",
+      "def get_frequency(my_list):\n    frequency = {}\n    for item in my_list:\n        if item not in frequency:\n            frequency[item] = 1\n        else:\n            frequency[item] += 1\n    return frequency"
+    ],
+    "similarity": 0.7939478764478765
+  },
+  {
+    "code": "def find_Sum(arr,n): \n    return sum([x for x in arr if arr.count(x) > 1])",
+    "is_human": 1,
+    "rewrites": [
+      "def find_Sum(arr, n):\n    return sum([x for x in arr if arr.count(x) > 1])",
+      "def find_Sum(arr, n):\n    return sum([x for x in arr if arr.count(x) > 1])",
+      "def find_Sum(arr, n):\n    return sum([x for x in arr if arr.count(x) > 1])",
+      "def find_Sum(arr, n):\n    return sum([x for x in arr if arr.count(x) > 1])"
+    ],
+    "similarity": 0.9864864864864865
+  },
+  {
+    "code": "def find_Max_Num(arr,n) : \n    arr.sort(reverse = True) \n    num = arr[0] \n    for i in range(1,n) : \n        num = num * 10 + arr[i] \n    return num",
+    "is_human": 1,
+    "rewrites": [
+      "def find_Max_Num(arr, n):\n    arr.sort(reverse=True)\n    num = arr[0]\n    for i in range(1, n):\n        num = num * 10 + arr[i]\n    return num",
+      "def find_Max_Num(arr, n):\n    arr.sort(reverse=True)\n    num = arr[0]\n    for i in range(1, n):\n        num = num * 10 + arr[i]\n    return num\narr = [2, 3, 4, 5, 6]\nn = 3\nprint(find_Max_Num(arr, n))",
+      "def find_Max_Num(arr,n) :  \n    arr.sort(reverse = True) \n    num = arr[0] \n    for i in range(1,n) : \n        num = num * 10 + arr[i] \n    return num",
+      "def find_Max_Num(arr, n):\n    arr.sort(reverse=True)\n    num = arr[0]\n    for i in range(1, n):\n        num = num * 10 + arr[i]\n    return num"
+    ],
+    "similarity": 0.9319926425842926
+  },
+  {
+    "code": "def len_log(list1):\n    max=len(list1[0])\n    for i in list1:\n        if len(i)>max:\n            max=len(i)\n    return max",
+    "is_human": 1,
+    "rewrites": [
+      "def len_log(list1):\n    max = 0\n    for i in list1:\n        if len(i) > max:\n            max = len(i)\n    return max",
+      "def len_log(list1):\n    max = len(list1[0])\n    for i in list1:\n        if len(i) > max:\n            max = len(i)\n    return max",
+      "def len_log(list1):\n    return max(map(len, list1))",
+      "def len_log(list1):\n    return max([len(i) for i in list1])"
+    ],
+    "similarity": 0.7087174489506466
+  },
+  {
+    "code": "def filter_even(my_list):\n    return list(filter(lambda x: x % 2 == 0, my_list))",
+    "is_human": 0,
+    "rewrites": [
+      "def filter_even(my_list):\n    return list(filter(lambda x: x % 2 == 0, my_list))",
+      "def filter_even(my_list):\n    return list(filter(lambda x: x % 2 == 0, my_list))",
+      "def filter_even(my_list):\n    return list(filter(lambda x: x % 2 == 0, my_list))",
+      "def filter_even(my_list):\n    return list(filter(lambda x: x % 2 == 0, my_list))"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def maximum_Sum(list1): \n    maxi = -100000\n    for x in list1: \n        sum = 0 \n        for y in x: \n            sum+= y      \n        maxi = max(sum,maxi)     \n    return maxi",
+    "is_human": 1,
+    "rewrites": [
+      "def maximum_Sum(list1):\n    maxi = -100000\n    for x in list1:\n        sum = 0\n        for y in x:\n            sum += y\n        maxi = max(sum,maxi)\n    return maxi",
+      "def maximum_Sum(list1):\n  maxi = -100000\n  for x in list1:\n    sum = 0\n    for y in x:\n      sum += y\n    maxi = max(sum, maxi)\n  return maxi",
+      "def maximum_Sum(list1):\n    maxi = -100000\n    for x in list1:\n        sum = 0\n        for y in x:\n            sum += y\n        maxi = max(sum, maxi)\n    return maxi",
+      "def maximum_Sum(list1):\n    maxi = -100000\n    for x in list1:\n        sum = 0\n        for y in x:\n            sum += y\n        maxi = max(sum, maxi)\n    return maxi"
+    ],
+    "similarity": 0.9313910910173735
+  },
+  {
+    "code": "def binary_to_decimal(binary): \n    binary1 = binary \n    decimal, i, n = 0, 0, 0\n    while(binary != 0): \n        dec = binary % 10\n        decimal = decimal + dec * pow(2, i) \n        binary = binary//10\n        i += 1\n    return (decimal)",
+    "is_human": 1,
+    "rewrites": [
+      "def binary_to_decimal(binary): \n    decimal = 0\n    for i in range(len(binary)): \n        dec = int(binary[i]) \n        decimal += dec * pow(2, len(binary) - i - 1) \n    return (decimal)",
+      "def binary_to_decimal(binary): \n    decimal, i, n = 0, 0, 0 \n    while(binary != 0): \n        dec = binary % 10 \n        decimal = decimal + dec * pow(2, i) \n        binary = binary//10 \n        i += 1 \n    return (decimal)",
+      "def binary_to_decimal(binary):\n    decimal = 0\n    i = 0\n    n = len(binary) - 1\n    while n >= 0:\n        dec = int(binary[n])\n        decimal += dec * pow(2, i)\n        n -= 1\n        i += 1\n    return (decimal)",
+      "def binary_to_decimal(binary): \n    binary1 = binary \n    decimal, i, n = 0, 0, 0\n    while(binary != 0): \n        dec = binary % 10\n        decimal = decimal + dec * pow(2, i) \n        binary = binary//10\n        i += 1\n    return (decimal)"
+    ],
+    "similarity": 0.7581355763070089
+  },
+  {
+    "code": "def is_sublist(l, s):\n\tsub_set = False\n\tif s == []:\n\t\tsub_set = True\n\telif s == l:\n\t\tsub_set = True\n\telif len(s) > len(l):\n\t\tsub_set = False\n\telse:\n\t\tfor i in range(len(l)):\n\t\t\tif l[i] == s[0]:\n\t\t\t\tn = 1\n\t\t\t\twhile (n < len(s)) and (l[i+n] == s[n]):\n\t\t\t\t\tn += 1\t\t\t\t\n\t\t\t\tif n == len(s):\n\t\t\t\t\tsub_set = True\n\treturn sub_set",
+    "is_human": 1,
+    "rewrites": [
+      "def is_sublist(l, s):\n    sub_set = False\n    if s == [] or s == l:\n        return True\n    elif len(s) > len(l):\n        return False\n    else:\n        for i in range(len(l)):\n            if l[i] == s[0]:\n                n = 1\n                while (n < len(s)) and (l[i+n] == s[n]):\n                    n += 1\n                if n == len(s):\n                    sub_set = True\n        return sub_set",
+      "def is_sublist(l1, l2):\n    if not l1 or l1 == l2:\n        return True\n    elif len(l1) > len(l2):\n        return False\n    for i in range(len(l1)):\n        if l1[i] != l2[i]:\n            return False\n    return True",
+      "def is_sublist(l, s):\n    if not l or not s:\n        return True\n    elif l == s:\n        return True\n    elif len(s) > len(l):\n        return False\n    for i in range(len(l)):\n        if l[i] != s[0]:\n            return False\n        n = 1\n        while n < len(s) and l[i+n] == s[n]:\n            n += 1\n        if n == len(s):\n            return True\n    return False",
+      "def is_sublist(l, s):\n    sub_set = False\n    if s == [] or s == l:\n        sub_set = True\n    elif len(s) > len(l):\n        sub_set = False\n    else:\n        for i in range(len(l)):\n            if l[i] == s[0]:\n                n = 1\n                while (n < len(s)) and (l[i+n] == s[n]):\n                    n += 1\n                if n == len(s):\n                    sub_set = True\n    return sub_set"
+    ],
+    "similarity": 0.395893559998172
+  },
+  {
+    "code": "def count_divisors(n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count",
+    "is_human": 0,
+    "rewrites": [
+      "def count_divisors(n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count",
+      "def count_divisors(n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count",
+      "def count_divisors(n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count",
+      "def count_divisors(n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def count_positive_numbers(my_list):\n    return sum(1 for x in my_list if x > 0)",
+    "is_human": 0,
+    "rewrites": [
+      "def count_positive_numbers(my_list):\n    return sum(1 for x in my_list if x > 0)",
+      "def count_positive_numbers(my_list):\n    return sum(1 for x in my_list if x > 0)",
+      "def count_positive_numbers(my_list):\n    return sum(1 for x in my_list if x > 0)",
+      "def count_positive_numbers(my_list):\n    return sum(1 for x in my_list if x > 0)"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def closest_smaller(n):\n    return int(n/2)",
+    "is_human": 0,
+    "rewrites": [
+      "def closest_smaller(n):\n    return int(n/2)",
+      "def closest_smaller(n):\n    return int(n/2)",
+      "def closest_smaller(n):\n    while n % 2 != 0:\n        n -= 1\n    return n",
+      "def closest_smaller(n):\n    return int(n/2)"
+    ],
+    "similarity": 0.9051724137931034
+  },
+  {
+    "code": "def get_Char(strr):  \n    summ = 0\n    for i in range(len(strr)): \n        summ += (ord(strr[i]) - ord('a') + 1)  \n    if (summ % 26 == 0): \n        return ord('z') \n    else: \n        summ = summ % 26\n        return chr(ord('a') + summ - 1)",
+    "is_human": 1,
+    "rewrites": [
+      "def get_Char(strr):  \n    summ = 0\n    for i in range(len(strr)): \n        summ += (ord(strr[i]) - ord('a') + 1)  \n    if (summ % 26 == 0): \n        return ord('z') \n    else: \n        summ = summ % 26\n        return chr(ord('a') + summ - 1)",
+      "def get_Char(strr):  \n    summ = 0\n    for i in range(len(strr)): \n        summ += (ord(strr[i]) - ord('a') + 1)  \n    if (summ % 26 == 0): \n        return ord('z') \n    else: \n        summ = summ % 26\n        return chr(ord('a') + summ - 1)",
+      "def get_Char(strr):\n    summ = 0\n    for i in range(len(strr)):\n        summ += ord(strr[i]) - ord('a') + 1\n    if summ == 0:\n        return 'z'\n    else:\n        return chr(ord('a') + summ - 1)",
+      "def get_Char(strr):  \n    summ = 0\n    for i in range(len(strr)): \n        summ += (ord(strr[i]) - ord('a') + 1)  \n    if (summ % 26 == 0): \n        return ord('z') \n    else: \n        summ = summ % 26\n        return chr(ord('a') + summ - 1)"
+    ],
+    "similarity": 0.9729885057471265
+  },
+  {
+    "code": "def find_equal_tuple(Input, k):\n  flag = 1\n  for tuple in Input:\n    if len(tuple) != k:\n      flag = 0\n      break\n  return flag\ndef get_equal(Input, k):\n  if find_equal_tuple(Input, k) == 1:\n    return (\"All tuples have same length\")\n  else:\n    return (\"All tuples do not have same length\")",
+    "is_human": 1,
+    "rewrites": [
+      "def get_equal(Input, k):\n  if all(len(tuple) == k for tuple in Input):\n    return \"All tuples have same length\"\n  else:\n    return \"All tuples do not have same length\"",
+      "def get_equal(Input, k):\n  if len({tuple[0] for tuple in Input}) == 1:\n    return (\"All tuples have same length\")\n  else:\n    return (\"All tuples do not have same length\")",
+      "def get_equal(Input, k):\n  if find_equal_tuple(Input, k) == 1:\n    return (\"All tuples have same length\")\n  else:\n    return (\"All tuples do not have same length\")",
+      "def get_equal(Input, k):\n    return \"All tuples have same length\" if all(len(tuple) == k for tuple in Input) else \"All tuples do not have same length\""
+    ],
+    "similarity": 0.6155741152680165
+  },
+  {
+    "code": "def dif_Square(n): \n    if (n % 4 != 2): \n        return True\n    return False",
+    "is_human": 1,
+    "rewrites": [
+      "def dif_Square(n):\n    return n % 4 != 2",
+      "def dif_Square(n):\n    return n % 4 != 2",
+      "def dif_Square(n):\n    if n % 4 != 2:\n        return False\n    else:\n        return True",
+      "def dif_Square(n):\n    return n % 4 == 0"
+    ],
+    "similarity": 0.5560547273841128
+  },
+  {
+    "code": "def square_nums(nums):\n square_nums = list(map(lambda x: x ** 2, nums))\n return square_nums",
+    "is_human": 1,
+    "rewrites": [
+      "def square_nums(nums):\n    return [x ** 2 for x in nums]",
+      "def square_nums(nums):\n    return [x**2 for x in nums]",
+      "def square_nums(nums):\n  return list(map(lambda x: x ** 2, nums))",
+      "def square_nums(nums):\n    return [x**2 for x in nums]"
+    ],
+    "similarity": 0.5971313989786896
+  },
+  {
+    "code": "def recursive_list_sum(data_list):\n\ttotal = 0\n\tfor element in data_list:\n\t\tif type(element) == type([]):\n\t\t\ttotal = total + recursive_list_sum(element)\n\t\telse:\n\t\t\ttotal = total + element\n\treturn total",
+    "is_human": 1,
+    "rewrites": [
+      "def recursive_list_sum(data_list):\n    total = 0\n    for element in data_list:\n        if isinstance(element, list):\n            total += recursive_list_sum(element)\n        else:\n            total += element\n    return total",
+      "def recursive_list_sum(data_list):\n    total = 0\n    for element in data_list:\n        if type(element) == list:\n            total += recursive_list_sum(element)\n        else:\n            total += element\n    return total",
+      "def recursive_list_sum(data_list):\n    return sum(data_list)",
+      "def recursive_list_sum(data_list):\n    total = 0\n    for element in data_list:\n        if type(element) == type([]):\n            total += recursive_list_sum(element)\n        else:\n            total += element\n    return total"
+    ],
+    "similarity": 0.4883009103513505
+  },
+  {
+    "code": "def find_first_duplicate(nums):\n    num_set = set()\n    no_duplicate = -1\n    for i in range(len(nums)):\n        if nums[i] in num_set:\n            return nums[i]\n        else:\n            num_set.add(nums[i])\n    return no_duplicate",
+    "is_human": 1,
+    "rewrites": [
+      "def find_first_duplicate(nums):\n    num_set = set()\n    no_duplicate = -1\n    for i in range(len(nums)):\n        if nums[i] in num_set:\n            return nums[i]\n        else:\n            num_set.add(nums[i])\n    return no_duplicate",
+      "def find_first_duplicate(nums):\n    num_set = set()\n    for i in range(len(nums)):\n        if nums[i] in num_set:\n            return nums[i]\n        else:\n            num_set.add(nums[i])\n    return -1",
+      "def find_first_duplicate(nums):\n    num_set = set()\n    for i in range(len(nums)):\n        if nums[i] in num_set:\n            return nums[i]\n        else:\n            num_set.add(nums[i])\n    return -1",
+      "def find_first_duplicate(nums):\n    num_set = set()\n    for i in range(len(nums)):\n        if nums[i] in num_set:\n            return nums[i]\n        else:\n            num_set.add(nums[i])\n    return -1"
+    ],
+    "similarity": 0.4642857142857143
+  },
+  {
+    "code": "NO_OF_CHARS = 256\ndef str_to_list(string): \n\ttemp = [] \n\tfor x in string: \n\t\ttemp.append(x) \n\treturn temp \ndef lst_to_string(List): \n\treturn ''.join(List) \ndef get_char_count_array(string): \n\tcount = [0] * NO_OF_CHARS \n\tfor i in string: \n\t\tcount[ord(i)] += 1\n\treturn count \ndef remove_dirty_chars(string, second_string): \n\tcount = get_char_count_array(second_string) \n\tip_ind = 0\n\tres_ind = 0\n\ttemp = '' \n\tstr_list = str_to_list(string) \n\twhile ip_ind != len(str_list): \n\t\ttemp = str_list[ip_ind] \n\t\tif count[ord(temp)] == 0: \n\t\t\tstr_list[res_ind] = str_list[ip_ind] \n\t\t\tres_ind += 1\n\t\tip_ind+=1\n\treturn lst_to_string(str_list[0:res_ind])",
+    "is_human": 1,
+    "rewrites": [
+      "def remove_dirty_chars(string, second_string):\n    count = get_char_count_array(second_string)\n    ip_ind = 0\n    res_ind = 0\n    temp = ''\n    str_list = str_to_list(string)\n    while ip_ind != len(str_list):\n        temp = str_list[ip_ind]\n        if count[ord(temp)] == 0:\n            str_list[res_ind] = str_list[ip_ind]\n            res_ind += 1\n        ip_ind+=1\n    return lst_to_string(str_list[0:res_ind])",
+      "NO_OF_CHARS = 256\ndef remove_dirty_chars(string, second_string):\n    count = get_char_count_array(second_string)\n    ip_ind = 0\n    res_ind = 0\n    temp = ''\n    str_list = str_to_list(string)\n    while ip_ind != len(str_list):\n        temp = str_list[ip_ind]\n        if count[ord(temp)] == 0:\n            str_list[res_ind] = str_list[ip_ind]\n            res_ind += 1\n        ip_ind+=1\n    return lst_to_string(str_list[0:res_ind])",
+      "NO_OF_CHARS = 256\ndef str_to_list(string):\n    temp = []\n    for x in string:\n        temp.append(x)\n    return temp\ndef lst_to_string(List):\n    return ''.join(List)\ndef get_char_count_array(string):\n    count = [0] * NO_OF_CHARS\n    for i in string:\n        count[ord(i)] += 1\n    return count\ndef remove_dirty_chars(string, second_string):\n    count = get_char_count_array(second_string)\n    ip_ind = 0\n    res_ind = 0\n    temp = ''\n    str_list = str_to_list(string)\n    while ip_ind != len(str_list):\n        temp = str_list[ip_ind]\n        if count[ord(temp)] == 0:\n            str_list[res_ind] = str_list[ip_ind]\n            res_ind += 1\n        ip_ind+=1\n    return lst_to_string(str_list[0:res_ind])",
+      "def remove_dirty_chars(string, second_string):\n    count = get_char_count_array(second_string)\n    res = ''\n    for char in string:\n        if count[ord(char)] == 0:\n            res += char\n    return res"
+    ],
+    "similarity": 0.4116816952399429
+  },
+  {
+    "code": "import sys\ndef next_smallest_palindrome(num):\n    numstr = str(num)\n    for i in range(num+1,sys.maxsize):\n        if str(i) == str(i)[::-1]:\n            return i",
+    "is_human": 1,
+    "rewrites": [
+      "def next_smallest_palindrome(num):\n    for i in range(num+1, sys.maxsize):\n        if str(i) == str(i)[::-1]:\n            return i\n    return None",
+      "import sys\ndef next_smallest_palindrome(num):\n    numstr = str(num)\n    for i in range(num+1,sys.maxsize):\n        if str(i) == str(i)[::-1]:\n            return i\n        else:\n            return None",
+      "import sys\ndef next_smallest_palindrome(num):\n    numstr = str(num)\n    for i in range(num+1,sys.maxsize):\n        if str(i) == str(i)[::-1]:\n            return i",
+      "import sys\ndef next_smallest_palindrome(num):\n    numstr = str(num)\n    for i in range(num+1,sys.maxsize):\n        if str(i) == str(i)[::-1]:\n            return i"
+    ],
+    "similarity": 0.9331724904929325
+  },
+  {
+    "code": "def is_opposite_sign(a, b):\n    return a * b < 0",
+    "is_human": 0,
+    "rewrites": [
+      "def is_opposite_sign(a, b):\n    return a * b < 0",
+      "def is_opposite_sign(a, b):\n    return a * b < 0",
+      "def is_opposite_sign(a, b):\n    return a * b < 0",
+      "def is_opposite_sign(a, b):\n    \"\"\"\n    Check if the signs of `a` and `b` are opposite.\n    Returns `True` if the product of `a` and `b` is negative, and `False` otherwise.\n    \"\"\"\n    return a * b < 0"
+    ],
+    "similarity": 0.8463855421686747
+  },
+  {
+    "code": "def get_product(arr):\n    prod = 1\n    for i in range(len(arr)):\n        if arr[i] not in arr[:i] + arr[i+1:]:\n            prod *= arr[i]\n    return prod",
+    "is_human": 0,
+    "rewrites": [
+      "def get_product(arr):\n    prod = 1\n    for i in range(len(arr)):\n        if arr[i] not in arr[:i] + arr[i+1:]:\n            prod *= arr[i]\n    return prod",
+      "def get_product(arr):\n    prod = 1\n    for i in range(len(arr)):\n        if arr[i] not in arr[:i] + arr[i+1:]:\n            prod *= arr[i]\n    return prod",
+      "def get_product(arr):\n    prod = 1\n    for i in range(len(arr)):\n        if arr[i] not in arr[:i] + arr[i+1:]:\n            prod *= arr[i]\n    return prod",
+      "def get_product(arr):\n    prod = 1\n    for i in range(len(arr)):\n        if arr[i] not in arr[:i] + arr[i+1:]:\n            prod *= arr[i]\n    return prod"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def word_len(s): \n    s = s.split(' ')   \n    for word in s:    \n        if len(word)%2!=0: \n            return True  \n        else:\n          return False",
+    "is_human": 1,
+    "rewrites": [
+      "def word_len(s):\n    for word in s.split(' '):\n        if len(word) % 2 != 0:\n            return True\n    return False",
+      "def word_len(s): \n    s = s.split(' ')   \n    for word in s:    \n        if len(word)%2!=0: \n            return True  \n        else:\n          return False",
+      "def word_len(s):\n    for word in s.split(' '):\n        if len(word) % 2 != 0:\n            return True\n    return False",
+      "def word_len(s):  \n    return any(len(word)%2!=0 for word in s.split(' '))"
+    ],
+    "similarity": 0.714625621830862
+  },
+  {
+    "code": "def square_perimeter(side):\n    return 4 * side",
+    "is_human": 0,
+    "rewrites": [
+      "def square_perimeter(side):\n    return 4 * side",
+      "def square_perimeter(side):\n    return 4 * side",
+      "def square_perimeter(side):\n    return 4 * side",
+      "def square_perimeter(side):\n    return 4 * side"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def comb_sort(my_list):\n    gap = len(my_list)\n    while gap > 1:\n        for i in range(gap):\n            if my_list[i] > my_list[i + gap]:\n                my_list[i], my_list[i + gap] = my_list[i + gap], my_list[i]\n        gap = int(gap / 1.25)\n    return my_list",
+    "is_human": 0,
+    "rewrites": [
+      "def comb_sort(my_list):\n    gap = len(my_list)\n    while gap > 1:\n        for i in range(gap):\n            if my_list[i] > my_list[i + gap]:\n                my_list[i], my_list[i + gap] = my_list[i + gap], my_list[i]\n        gap = int(gap / 1.25)\n    return my_list",
+      "def comb_sort(my_list):\n    gap = len(my_list)\n    while gap > 1:\n        for i in range(gap):\n            if my_list[i] > my_list[i + gap]:\n                my_list[i], my_list[i + gap] = my_list[i + gap], my_list[i]\n        gap = int(gap / 1.25)\n    return my_list",
+      "def comb_sort(my_list):\n    gap = len(my_list)\n    while gap > 1:\n        for i in range(gap):\n            if my_list[i] > my_list[i + gap]:\n                my_list[i], my_list[i + gap] = my_list[i + gap], my_list[i]\n        gap = int(gap / 1.25)\n    return my_list",
+      "def comb_sort(my_list):\n    gap = len(my_list)\n    while gap > 1:\n        for i in range(gap):\n            if my_list[i] > my_list[i + gap]:\n                my_list[i], my_list[i + gap] = my_list[i + gap], my_list[i]\n        gap = int(gap / 1.25)\n    return my_list"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def is_square_difference(n):\n    for i in range(int(n ** 0.5)):\n        j = int((n - i ** 2) ** 0.5)\n        if j ** 2 == n - i ** 2:\n            return True\n    return False",
+    "is_human": 0,
+    "rewrites": [
+      "def is_square_difference(n):\n    i = int(n ** 0.5)\n    j = (n - i ** 2) ** 0.5\n    return j ** 2 == n - i ** 2",
+      "def is_square_difference(n):\n    for i in range(int(n ** 0.5)):\n        j = int((n - i ** 2) ** 0.5)\n        if j ** 2 == n - i ** 2:\n            return True\n    return False",
+      "def is_square_difference(n):\n  for i in range(int(n ** 0.5)):\n    j = int((n - i ** 2) ** 0.5)\n    if j ** 2 == n - i ** 2:\n      return True\n  return False",
+      "def is_square_difference(n):\n    for i in range(int(n ** 0.5)):\n        j = int((n - i ** 2) ** 0.5)\n        if j ** 2 == n - i ** 2:\n            return True\n    return False"
+    ],
+    "similarity": 0.9177016645326505
+  },
+  {
+    "code": "def filter_evennumbers(nums):\n even_nums = list(filter(lambda x: x%2 == 0, nums))\n return even_nums",
+    "is_human": 1,
+    "rewrites": [
+      "def filter_evennumbers(nums):\n  return list(filter(lambda x: x%2 == 0, nums))",
+      "def filter_evennumbers(nums):\n    return list(filter(lambda x: x%2 == 0, nums))",
+      "def filter_evennumbers(nums):\n  return list(filter(lambda x: x%2 == 0, nums))",
+      "def filter_evennumbers(nums):\n    return list(filter(lambda x: x%2 == 0, nums))"
+    ],
+    "similarity": 0.813585291113381
+  },
+  {
+    "code": "def find_tuples(test_list, K):\n  res = [sub for sub in test_list if all(ele % K == 0 for ele in sub)]\n  return (str(res))",
+    "is_human": 1,
+    "rewrites": [
+      "def find_tuples(test_list, K):\n  res = [sub for sub in test_list if all(ele % K == 0 for ele in sub)]\n  return (str(res))",
+      "def find_tuples(test_list, K):\n    res = [sub for sub in test_list if all(ele % K == 0 for ele in sub)]\n    return (str(res))",
+      "def find_tuples(test_list, K):\n  return [sub for sub in test_list if all(ele % K == 0 for ele in sub)]",
+      "def find_tuples(test_list, K):\n    return [sub for sub in test_list if all(ele % K == 0 for ele in sub)]"
+    ],
+    "similarity": 0.9334436788314071
+  },
+  {
+    "code": "def comb_sort(nums):\n    shrink_fact = 1.3\n    gaps = len(nums)\n    swapped = True\n    i = 0\n    while gaps > 1 or swapped:\n        gaps = int(float(gaps) / shrink_fact)\n        swapped = False\n        i = 0\n        while gaps + i < len(nums):\n            if nums[i] > nums[i+gaps]:\n                nums[i], nums[i+gaps] = nums[i+gaps], nums[i]\n                swapped = True\n            i += 1\n    return nums",
+    "is_human": 1,
+    "rewrites": [
+      "def comb_sort(nums):\n    shrink_fact = 1.3\n    gaps = len(nums)\n    swapped = True\n    i = 0\n    while gaps > 1 or swapped:\n        gaps = int(float(gaps) / shrink_fact)\n        swapped = False\n        i = 0\n        while gaps + i < len(nums):\n            if nums[i] > nums[i+gaps]:\n                nums[i], nums[i+gaps] = nums[i+gaps], nums[i]\n                swapped = True\n            i += 1\n    return nums",
+      "def comb_sort(nums):\n    shrink_fact = 1.3\n    gaps = len(nums)\n    swapped = True\n    i = 0\n    while gaps > 1 or swapped:\n        gaps = int(float(gaps) / shrink_fact)\n        swapped = False\n        i = 0\n        while gaps + i < len(nums):\n            if nums[i] > nums[i+gaps]:\n                nums[i], nums[i+gaps] = nums[i+gaps], nums[i]\n                swapped = True\n            i += 1\n    return nums",
+      "def comb_sort(nums):\n    shrink_fact = 1.3\n    gaps = len(nums)\n    swapped = True\n    i = 0\n    while gaps > 1 or swapped:\n        gaps = int(float(gaps) / shrink_fact)\n        swapped = False\n        i = 0\n        while gaps + i < len(nums):\n            if nums[i] > nums[i+gaps]:\n                nums[i], nums[i+gaps] = nums[i+gaps], nums[i]\n                swapped = True\n            i += 1\n    return nums",
+      "def comb_sort(nums):\n    \"\"\"\n    Sort a list of numbers using the Comb Sort algorithm.\n    :param nums: A list of numbers to be sorted\n    :return: The sorted list\n    \"\"\"\n    shrink_fact = 1.3 \n    gaps = len(nums) \n    swapped = True \n    i = 0 \n    while gaps > 1 or swapped: \n        gaps = int(float(gaps) / shrink_fact) \n        swapped = False \n        i = 0 \n        while gaps + i < len(nums): \n            if nums[i] > nums[i+gaps]: \n                nums[i], nums[i+gaps] = nums[i+gaps], nums[i]\n                swapped = True \n            i += 1 \n    return nums"
+    ],
+    "similarity": 0.9504069175991862
+  },
+  {
+    "code": "def count_odd_set_bits(n):\n    count = 0\n    while n > 0:\n        if n % 2 == 1:\n            count += 1\n        n >>= 1\n    return count",
+    "is_human": 0,
+    "rewrites": [
+      "def count_odd_set_bits(n):\n    count = 0\n    while n > 0:\n        if n % 2 == 1:\n            count += 1\n        n >>= 1\n    return count",
+      "def count_odd_set_bits(n):\n    count = 0\n    while n > 0:\n        if n % 2 == 1:\n            count += 1\n        n >>= 1\n    return count",
+      "def count_odd_set_bits(n):\n    count = 0\n    while n > 0:\n        if n % 2 == 1:\n            count += 1\n        n >>= 1\n    return count\nprint(count_odd_set_bits(3)) \nprint(count_odd_set_bits(5))",
+      "def count_odd_set_bits(n):\n    count = 0\n    while n > 0:\n        if n % 2 == 1:\n            count += 1\n        n >>= 1\n    return count"
+    ],
+    "similarity": 0.9554380664652569
+  },
+  {
+    "code": "def binary_to_decimal(binary):\n    return int(binary, 2)",
+    "is_human": 0,
+    "rewrites": [
+      "def binary_to_decimal(binary):\n    return int(binary, 2)",
+      "def binary_to_decimal(binary):\n    return int(binary, 2)",
+      "def binary_to_decimal(binary):\n    return int(binary, 2)",
+      "def binary_to_decimal(binary):\n    return int(binary, 2)"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def decimal_to_binary(n):\n    return bin(n)[2:]",
+    "is_human": 0,
+    "rewrites": [
+      "def decimal_to_binary(n):\n    return bin(n)[2:]",
+      "def decimal_to_binary(n):\n    return bin(n)[2:]",
+      "def decimal_to_binary(n):\n    return bin(n)[2:]",
+      "def decimal_to_binary(n):\n    return bin(n)[2:]"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def count_With_Odd_SetBits(n): \n    if (n % 2 != 0): \n        return (n + 1) / 2\n    count = bin(n).count('1') \n    ans = n / 2\n    if (count % 2 != 0): \n        ans += 1\n    return ans",
+    "is_human": 1,
+    "rewrites": [
+      "def count_With_Odd_SetBits(n):\n    if n % 2 != 0:\n        return (n + 1) / 2\n    count = bin(n).count('1')\n    ans = n / 2\n    if count % 2 != 0:\n        ans += 1\n    return ans",
+      "def count_with_odd_bits(n):\n    return n // 2 + (bin(n).count('1') % 2)",
+      "def count_With_Odd_SetBits(n):\n    \"\"\"\n    Returns the number of set bits in the binary representation of n that are odd.\n    \"\"\"\n    if (n % 2 != 0):\n        return (n + 1) / 2\n    count = bin(n).count('1')\n    ans = n / 2\n    if (count % 2 != 0):\n        ans += 1\n    return ans",
+      "def count_With_Odd_SetBits(n):\n    if n % 2 != 0:\n        return (n + 1) / 2\n    else:\n        count = bin(n).count('1')\n        ans = n / 2\n        if count % 2 != 0:\n            ans += 1\n        return ans"
+    ],
+    "similarity": 0.7808558093416479
+  },
+  {
+    "code": "def get_most_common_words(dictionary):\n    return {word: frequency for word, frequency in Counter(dictionary).items() if frequency == max(Counter(dictionary).values())}",
+    "is_human": 0,
+    "rewrites": [
+      "def get_most_common_words(dictionary):\n    return {word: frequency for word, frequency in Counter(dictionary).items() if frequency == max(Counter(dictionary).values())}",
+      "def get_most_common_words(dictionary):\n    return {word: frequency for word, frequency in Counter(dictionary).items() if frequency == max(Counter(dictionary).values())}",
+      "def get_most_common_words(dictionary):\n    return {word: frequency for word, frequency in Counter(dictionary).items() if frequency == max(Counter(dictionary).values())}",
+      "def get_most_common_words(dictionary):\n    return {word: frequency for word, frequency in Counter(dictionary).items() if frequency == max(Counter(dictionary).values())}"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def check_k_elements(test_list, K):\n  res = True\n  for tup in test_list:\n    for ele in tup:\n      if ele != K:\n        res = False\n  return (res)",
+    "is_human": 1,
+    "rewrites": [
+      "def check_k_elements(test_list, K):\n  for tup in test_list:\n    for ele in tup:\n      if ele != K:\n        return False\n  return True",
+      "def check_k_elements(test_list, K):\n    for tup in test_list:\n        if not all(ele == K for ele in tup):\n            return False\n    return True",
+      "def check_k_elements(test_list, K):\n  for tup in test_list:\n    if any(ele != K for ele in tup):\n      return False\n  return True",
+      "def check_k_elements(test_list, K):\n    return all(ele == K for tup in test_list for ele in tup)"
+    ],
+    "similarity": 0.7733284058140684
+  },
+  {
+    "code": "def min_length(my_list):\n    return min(len(sublist) for sublist in my_list)",
+    "is_human": 0,
+    "rewrites": [
+      "def min_length(my_list):\n    return min([len(sublist) for sublist in my_list])",
+      "def min_length(my_list):\n    return min(map(len, my_list))",
+      "def min_length(my_list):\n    return min([len(sublist) for sublist in my_list])",
+      "def min_length(my_list):\n    return min(len(sublist) for sublist in my_list)"
+    ],
+    "similarity": 0.9375363442527622
+  },
+  {
+    "code": "def bell_number(n):   \n    bell = [[0 for i in range(n+1)] for j in range(n+1)] \n    bell[0][0] = 1\n    for i in range(1, n+1): \n        bell[i][0] = bell[i-1][i-1]  \n        for j in range(1, i+1): \n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1]   \n    return bell[n][0]",
+    "is_human": 1,
+    "rewrites": [
+      "def bell_number(n):\n    bell = [[0 for i in range(n+1)] for j in range(n+1)] \n    bell[0][0] = 1\n    for i in range(1, n+1): \n        bell[i][0] = bell[i-1][i-1]  \n        for j in range(1, i+1): \n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1]   \n    return bell[n][0]",
+      "def bell_number(n):\n    bell = [[0 for i in range(n+1)] for j in range(n+1)]\n    bell[0][0] = 1\n    for i in range(1, n+1):\n        bell[i][0] = bell[i-1][i-1]\n        for j in range(1, i+1):\n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1]\n    return bell[n][0]",
+      "def bell_number(n): \n    bell = [[0 for i in range(n+1)] for j in range(n+1)]  \n    bell[0][0] = 1\n    for i in range(1, n+1): \n        bell[i][0] = bell[i-1][i-1]  \n        for j in range(1, i+1): \n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1]   \n    return bell[n][0]",
+      "def bell_number(n):  \n  bell = [[0 for i in range(n+1)] for j in range(n+1)]  \n  bell[0][0] = 1  \n  for i in range(1, n+1):  \n    bell[i][0] = bell[i-1][i-1]  \n    for j in range(1, i+1):  \n      bell[i][j] = bell[i-1][j-1] + bell[i][j-1]  \n  return bell[n][0]"
+    ],
+    "similarity": 0.6430229133215367
+  },
+  {
+    "code": "import re  \ndef remove(list): \n    pattern = '[0-9]'\n    list = [re.sub(pattern, '', i) for i in list] \n    return list",
+    "is_human": 1,
+    "rewrites": [
+      "import re\ndef remove(list):\n    return [re.sub('[0-9]', '', i) for i in list]",
+      "import re\ndef remove(list):\n    pattern = '[0-9]'\n    return [re.sub(pattern, '', i) for i in list]",
+      "import re  \ndef remove(list): \n    pattern = '[0-9]'\n    return [re.sub(pattern, '', i) for i in list]",
+      "def remove(list): \n    pattern = '[0-9]'\n    return [re.sub(pattern, '', i) for i in list]"
+    ],
+    "similarity": 0.8093209934934795
+  },
+  {
+    "code": "def binomial_Coeff(n,k): \n    if k > n : \n       return 0\n    if k==0 or k ==n : \n        return 1 \n    return binomial_Coeff(n-1,k-1) + binomial_Coeff(n-1,k)",
+    "is_human": 1,
+    "rewrites": [
+      "def binomial_coeff(n, k):\n    if k > n or k < 0:\n        return 0\n    elif k == 0 or k == n:\n        return 1\n    else:\n        return binomial_coeff(n-1, k-1) + binomial_coeff(n-1, k)",
+      "def binomial_Coeff(n,k):\n    if k > n or k < 0:\n        return 0\n    if k==0 or k ==n:\n        return 1\n    return binomial_Coeff(n-1,k-1) + binomial_Coeff(n-1,k)",
+      "def binomial_Coeff(n,k): \n    if k > n : \n       return 0\n    if k==0 or k ==n : \n        return 1 \n    return binomial_Coeff(n-1,k-1) + binomial_Coeff(n-1,k)",
+      "def binomial_coeff(n, k):\n    if k > n or k < 0:\n        return 0\n    elif k == 0 or k == n:\n        return 1\n    else:\n        return binomial_coeff(n-1, k-1) + binomial_coeff(n-1, k)"
+    ],
+    "similarity": 0.9305829678362574
+  },
+  {
+    "code": "def counting_sort(arr):\n    max_elem = max(arr)\n    count = [0] * (max_elem + 1)\n    for elem in arr:\n        count[elem] += 1\n    for i in range(1, len(count)):\n        count[i] += count[i - 1]\n    result = []\n    for elem in arr:\n        index = count[elem] - 1\n        result.insert(index, elem)\n        count[elem] -= 1\n    return result",
+    "is_human": 0,
+    "rewrites": [
+      "def counting_sort(arr):\n    max_elem = max(arr)\n    count = [0] * (max_elem + 1)\n    for elem in arr:\n        count[elem] += 1\n    for i in range(1, len(count)):\n        count[i] += count[i - 1]\n    result = []\n    for elem in arr:\n        index = count[elem] - 1\n        result.insert(index, elem)\n        count[elem] -= 1\n    return result",
+      "def counting_sort(arr):\n    max_elem = max(arr)\n    count = [0] * (max_elem + 1)\n    for elem in arr:\n        count[elem] += 1\n    for i in range(1, len(count)):\n        count[i] += count[i - 1]\n    result = []\n    for elem in arr:\n        index = count[elem] - 1\n        result.insert(index, elem)\n        count[elem] -= 1\n    return result",
+      "def counting_sort(arr):\n    max_elem = max(arr)\n    count = [0] * (max_elem + 1)\n    for elem in arr:\n        count[elem] += 1\n    for i in range(len(count) - 1, -1, -1):\n        if count[i] > 0:\n            result.insert(i, elem)\n            count[i] -= 1\n    return result",
+      "def counting_sort(arr):\n    max_elem = max(arr)\n    count = [0] * (max_elem + 1)\n    for elem in arr:\n        count[elem] += 1\n    for i in range(1, len(count)):\n        count[i] += count[i - 1]\n    result = []\n    for elem in arr:\n        index = count[elem] - 1\n        result.insert(index, elem)\n        count[elem] -= 1\n    return result"
+    ],
+    "similarity": 0.9028455284552845
+  },
+  {
+    "code": "def get_Odd_Occurrence(arr,arr_size):   \n    for i in range(0,arr_size): \n        count = 0\n        for j in range(0,arr_size): \n            if arr[i] == arr[j]: \n                count+=1     \n        if (count % 2 != 0): \n            return arr[i]     \n    return -1",
+    "is_human": 1,
+    "rewrites": [
+      "def get_Odd_Occurrence(arr):\n    for i in range(len(arr)):\n        count = 0\n        for j in range(len(arr)):\n            if arr[i] == arr[j]:\n                count += 1\n        if count % 2 != 0:\n            return arr[i]\n    return -1",
+      "def get_Odd_Occurrence(arr, arr_size):\n    for i in range(0, arr_size):\n        count = 0\n        for j in range(0, arr_size):\n            if arr[i] == arr[j]:\n                count += 1\n        if (count % 2 != 0):\n            return arr[i]\n    return -1",
+      "def get_Odd_Occurrence(arr): \n    for i in range(len(arr)): \n        if arr[i] % 2 != 0: \n            return arr[i]     \n    return -1",
+      "def get_Odd_Occurrence(arr):\n    for i in range(len(arr)):\n        count = 0\n        for j in range(len(arr)):\n            if arr[i] == arr[j]:\n                count += 1\n        if count % 2 != 0:\n            return arr[i]\n    return -1"
+    ],
+    "similarity": 0.6986831293413974
+  },
+  {
+    "code": "def get_multiples(n, m):\n    return [n * i for i in range(1, m + 1)]",
+    "is_human": 0,
+    "rewrites": [
+      "def get_multiples(n, m):\n    return [n * i for i in range(1, m + 1)]",
+      "def get_multiples(n, m):\n    return [n * i for i in range(1, m + 1)]",
+      "def get_multiples(n, m):\n    return [n * i for i in range(1, m + 1)]",
+      "def get_multiples(n, m):\n    multiples = []\n    for i in range(1, m + 1):\n        if n * i % 1 == 0:\n            multiples.append(n * i)\n    return multiples"
+    ],
+    "similarity": 0.8811111111111112
+  },
+  {
+    "code": "def closest_num(N):\n  return (N - 1)",
+    "is_human": 1,
+    "rewrites": [
+      "def closest_num(N):\n  return (N - 1)",
+      "def closest_num(N):\n  return (N - 1)",
+      "def closest_num(N):\n  return N - 1",
+      "def closest_num(N):\n  return (N - 1)"
+    ],
+    "similarity": 0.9928571428571429
+  },
+  {
+    "code": "import re\ndef find_long_words(string):\n    pattern = r'\\w{4,}'\n    return re.findall(pattern, string)",
+    "is_human": 0,
+    "rewrites": [
+      "import re\ndef find_long_words(string):\n    pattern = r'\\w{4,}'\n    return re.findall(pattern, string)",
+      "import re\ndef find_long_words(string):\n    pattern = r'\\w{4,}'\n    return re.findall(pattern, string)",
+      "import re\ndef find_long_words(string):\n    pattern = r'\\w{4,}'\n    return re.findall(pattern, string)\nif __name__ == \"__main__\":\n    test_string = \"hello world\"\n    print(find_long_words(test_string))",
+      "import re\ndef find_long_words(string):\n    pattern = r'\\w{4,}'\n    return re.findall(pattern, string)"
+    ],
+    "similarity": 0.9177740863787376
+  },
+  {
+    "code": "import re\ndef find_char_long(text):\n  return (re.findall(r\"\\b\\w{4,}\\b\", text))",
+    "is_human": 1,
+    "rewrites": [
+      "import re\ndef find_char_long(text):\n  return re.findall(r\"\\b\\w{4,}\\b\", text)",
+      "import re\ndef find_char_long(text):\n  return (re.findall(r\"\\b\\w{4,}\\b\", text))",
+      "import re\ndef find_char_long(text):\n    return [word for word in re.findall(r\"\\b\\w{4,}\\b\", text)]",
+      "import re\ndef find_char_long(text):\n  return re.findall(r\"\\b\\w{4,}\\b\", text)"
+    ],
+    "similarity": 0.9606493506493506
+  },
+  {
+    "code": "def is_sequence(patterns):\n    return all(pattern in str for pattern in patterns)",
+    "is_human": 0,
+    "rewrites": [
+      "def is_sequence(patterns, str):\n    for pattern in patterns:\n        if pattern not in str:\n            return False\n    return True",
+      "def is_sequence(patterns):\n    return all(pattern in patterns[0] for pattern in patterns)",
+      "def is_sequence(patterns):\n    if not patterns:\n        return False\n    for pattern in patterns:\n        if pattern not in str(patterns[0]):\n            return False\n    return True",
+      "def is_sequence(patterns, str):\n    return all(pattern in str for pattern in patterns)"
+    ],
+    "similarity": 0.7309060411565564
+  },
+  {
+    "code": "def contains_duplicate(my_list):\n    return len(set(my_list)) < len(my_list)",
+    "is_human": 0,
+    "rewrites": [
+      "def contains_duplicate(my_list):\n    return len(set(my_list)) < len(my_list)",
+      "def contains_duplicate(my_list):\n    return len(set(my_list)) < len(my_list)",
+      "def contains_duplicate(my_list):\n    return len(set(my_list)) < len(my_list)",
+      "def contains_duplicate(my_list):\n    return len(set(my_list)) < len(my_list)"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def power(a,b):\n\tif b==0:\n\t\treturn 1\n\telif a==0:\n\t\treturn 0\n\telif b==1:\n\t\treturn a\n\telse:\n\t\treturn a*power(a,b-1)",
+    "is_human": 1,
+    "rewrites": [
+      "def power(a, b):\n    if b == 0:\n        return 1\n    elif a == 0 and b != 0:\n        return 0\n    elif b == 1:\n        return a\n    else:\n        return a * power(a, b - 1)",
+      "def power(a,b):\n\tif b==0: return 1\n\telif a==0 and b!=0: return 0\n\telif b==1: return a\n\telse: return a*power(a,b-1)",
+      "def power(a, b):\n\tif b == 0:\n\t\treturn 1\n\telif a == 0:\n\t\treturn 0\n\telif b == 1:\n\t\treturn a\n\telse:\n\t\treturn a * power(a, b - 1)",
+      "def power(a,b):\n\tif b==0:\n\t\treturn 1\n\telif a==0:\n\t\treturn 0\n\telif b==1:\n\t\treturn a\n\telse:\n\t\treturn a*power(a,b-1)"
+    ],
+    "similarity": 0.8870549007917565
+  },
+  {
+    "code": "import re\ndef multiple_split(text):\n  return (re.split('; |, |\\*|\\n',text))",
+    "is_human": 1,
+    "rewrites": [
+      "import re\ndef multiple_split(text):\n  return re.split('; |, |\\*|\\n', text)",
+      "import re\ndef multiple_split(text):\n    return re.split('; |, |\\*|\\n', text)",
+      "import re\ndef multiple_split(text):\n  return re.split('; |, |\\\\*|\\\\n', text)",
+      "import re\ndef multiple_split(text):\n  return re.split('; |, |*|\\n', text)"
+    ],
+    "similarity": 0.9716533948055349
+  },
+  {
+    "code": "def count_substrings(my_string):\n    count = 0\n    for i in range(len(my_string)):\n        substring = my_string[i:]\n        if sum(int(c) for c in substring) == len(substring):\n            count += 1\n    return count",
+    "is_human": 0,
+    "rewrites": [
+      "def count_substrings(my_string):\n    count = 0\n    for i in range(len(my_string)):\n        substring = my_string[i:]\n        if sum(int(c) for c in substring) == len(substring):\n            count += 1\n    return count",
+      "def count_substrings(my_string):\n    count = 0\n    for i in range(len(my_string)):\n        substring = my_string[i:]\n        if sum(int(c) for c in substring) == len(substring):\n            count += 1\n    return count",
+      "def count_substrings(my_string):\n    count = 0\n    for c in my_string:\n        if sum(int(c) for c in my_string[i:]) == len(my_string[i:]):\n            count += 1\n    return count",
+      "def count_substrings(my_string):\n    count = 0\n    for i in range(len(my_string)):\n        substring = my_string[i:]\n        if sum(int(c) for c in substring) == len(substring):\n            count += 1\n    return count"
+    ],
+    "similarity": 0.9570707070707071
+  },
+  {
+    "code": "import heapq as hq\ndef heap_queue_largest(nums,n):\n  largest_nums = hq.nlargest(n, nums)\n  return largest_nums",
+    "is_human": 1,
+    "rewrites": [
+      "import heapq as hq\ndef heap_queue_largest(nums,n): return hq.nlargest(n, nums)",
+      "import heapq as hq\ndef heap_queue_largest(nums, n):\n  return hq.nlargest(n, nums)",
+      "import heapq as hq\ndef heap_queue_largest(nums, n):\n    return hq.nlargest(n, nums)",
+      "import heapq as hq\ndef heap_queue_largest(nums, n):\n  return hq.nlargest(n, nums)"
+    ],
+    "similarity": 0.812577161785357
+  },
+  {
+    "code": "def dec_to_bin(n):\n    if n == 0:\n        return \"0\"\n    binary = \"\"\n    while n > 0:\n        binary = str(n % 2) + binary\n        n //= 2\n    return binary",
+    "is_human": 0,
+    "rewrites": [
+      "def dec_to_bin(n):\n    return bin(n)[2:]",
+      "def dec_to_bin(n):\n    if n == 0:\n        return \"0\"\n    binary = \"\"\n    while n > 0:\n        binary = str(n % 2) + binary\n        n //= 2\n    return binary",
+      "def dec_to_bin(n):\n    if n == 0:\n        return \"0\"\n    binary = \"\"\n    while n > 0:\n        binary = str(n % 2) + binary\n        n //= 2\n    return binary",
+      "def dec_to_bin(n):\n    if n == 0:\n        return \"0\"\n    binary = \"\"\n    while n > 0:\n        binary = str(n % 2) + binary\n        n //= 2\n    return binary"
+    ],
+    "similarity": 0.8341836734693877
+  },
+  {
+    "code": "def find_duplicate(arr):\n    for i in range(len(arr)):\n        if arr[i] in arr[:i] or arr[i] in arr[i+1:]:\n            return arr[i]\n    return None",
+    "is_human": 0,
+    "rewrites": [
+      "def find_duplicate(arr):\n    for i in range(len(arr)):\n        if arr[i] in arr[:i] or arr[i] in arr[i+1:]:\n            return arr[i]\n    return None",
+      "def find_duplicate(arr):\n    for i in range(len(arr)):\n        if arr[i] in arr[:i] or arr[i] in arr[i+1:]:\n            return arr[i]\n    return None",
+      "def find_duplicate(arr):\n    seen = set()\n    for i in arr:\n        if i in seen:\n            return i\n        seen.add(i)\n    return None",
+      "def find_duplicate(arr):\n    for i in range(len(arr)):\n        if arr[i] in arr[:i] or arr[i] in arr[i+1:]:\n            return arr[i]\n    return None"
+    ],
+    "similarity": 0.9224738675958188
+  },
+  {
+    "code": "def newman_conway(n):\n    if n == 1:\n        return 1\n    elif n == 2:\n        return 1\n    else:\n        return newman_conway(newman_conway(n-1)) + newman_conway(n-2)",
+    "is_human": 0,
+    "rewrites": [
+      "def newman_conway(n):\n    if n == 1 or n == 2:\n        return 1\n    else:\n        return newman_conway(n-1) + newman_conway(n-2)",
+      "def newman_conway(n):\n    if n == 1 or n == 2:\n        return 1\n    else:\n        return newman_conway(newman_conway(n-1)) + newman_conway(n-2)",
+      "def newman_conway(n):\n    if n in (1, 2):\n        return 1\n    else:\n        return newman_conway(newman_conway(n-1)) + newman_conway(n-2)",
+      "def newman_conway(n):\n    if n == 1:\n        return 1\n    elif n == 2:\n        return 1\n    else:\n        return newman_conway(newman_conway(n-1)) + newman_conway(n-2)"
+    ],
+    "similarity": 0.9139586265001927
+  },
+  {
+    "code": "def remove_first_and_last(str, char):\n    return str[1:-1].replace(char, '')",
+    "is_human": 0,
+    "rewrites": [
+      "def remove_first_and_last(str, char):\n    return str[1:-1].replace(char, '')",
+      "def remove_first_and_last(str, char):\n    return str[1:-1].replace(char, '')",
+      "def remove_first_and_last(str, char):\n    return str[1:-1].replace(char, '')",
+      "def remove_first_and_last(str, char):\n    return str[1:-1].replace(char, '')"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def test_distinct(data):\n  if len(data) == len(set(data)):\n    return True\n  else:\n    return False;",
+    "is_human": 1,
+    "rewrites": [
+      "def test_distinct(data):\n  return len(data) == len(set(data))",
+      "def test_distinct(data):\n    return len(set(data)) == len(data)",
+      "def test_distinct(data):\n  if len(data) == len(set(data)):\n    return True\n  else:\n    return False;",
+      "def test_distinct(data):\n    return len(data) == len(set(data))"
+    ],
+    "similarity": 0.7428933429867012
+  },
+  {
+    "code": "import collections as ct\ndef merge_dictionaries_three(dict1,dict2, dict3):\n    merged_dict = dict(ct.ChainMap({},dict1,dict2,dict3))\n    return merged_dict",
+    "is_human": 1,
+    "rewrites": [
+      "import collections as ct\ndef merge_dictionaries_three(dict1, dict2, dict3):\n    return dict(ct.ChainMap({}, dict1, dict2, dict3))",
+      "import collections as ct\ndef merge_dictionaries_three(dict1,dict2, dict3):\n    merged_dict = dict(ct.ChainMap({},dict1,dict2,dict3))\n    return merged_dict",
+      "import collections as ct\ndef merge_dictionaries(dict1,dict2, dict3):\n    merged_dict = dict(ct.ChainMap({},dict1,dict2,dict3))\n    return merged_dict",
+      "from collections import ChainMap\ndef merge_dictionaries_three(dict1, dict2, dict3):\n    return dict(ChainMap({}, dict1, dict2, dict3))"
+    ],
+    "similarity": 0.8966752733666614
+  },
+  {
+    "code": "def find_Rotations(str): \n    tmp = str + str\n    n = len(str) \n    for i in range(1,n + 1): \n        substring = tmp[i: i+n] \n        if (str == substring): \n            return i \n    return n",
+    "is_human": 1,
+    "rewrites": [
+      "def find_rotations(str):\n    tmp = str + str\n    n = len(str)\n    for i in range(1, n + 1):\n        substring = tmp[i:i+n]\n        if (str == substring):\n            return i + 1\n    return n",
+      "def find_Rotations(str): \n    tmp = str + str\n    n = len(str) \n    for i in range(1,n + 1): \n        substring = tmp[i: i+n] \n        if (str == substring): \n            return i \n    return n",
+      "def find_Rotations(str):\n    return len(str) - (str + str).find(str)",
+      "def find_rotations(str):\n    tmp = str + str\n    n = len(str)\n    for i in range(1, n + 1):\n        substring = tmp[i:i+n]\n        if (str == substring):\n            return i\n    return n"
+    ],
+    "similarity": 0.8064897786852188
+  },
+  {
+    "code": "def find_substring(str1, sub_str):\n   if any(sub_str in s for s in str1):\n       return True\n   return False",
+    "is_human": 1,
+    "rewrites": [
+      "def find_substring(str1, sub_str):\n    return any(sub_str in s for s in str1)",
+      "def find_substring(str1, sub_str):\n    return any(sub_str in s for s in str1)",
+      "def find_substring(str1, sub_str):\n    return any(sub_str in s for s in str1)",
+      "def find_substring(str1, sub_str):\n    return any(sub_str in s for s in str1)"
+    ],
+    "similarity": 0.7567567567567568
+  },
+  {
+    "code": "def check_difference(num1, num2):\n    return bin(num1 ^ num2).count('1') == 1",
+    "is_human": 0,
+    "rewrites": [
+      "def check_difference(num1, num2):\n    diff = num1 ^ num2\n    count = bin(diff).count('1')\n    return count == 1",
+      "def check_difference(num1, num2):\n    return bin(num1 ^ num2).count('1') == 1",
+      "def check_difference(num1, num2):\n    return bin(num1 ^ num2).count('1') == 1",
+      "def check_difference(num1, num2):\n    return bin(num1 ^ num2).count('1') == 1"
+    ],
+    "similarity": 0.9281914893617021
+  },
+  {
+    "code": "def check_first_last_characters(string):\n    return string[0] == string[-1]",
+    "is_human": 0,
+    "rewrites": [
+      "def check_first_last_characters(string):\n    return string[0] == string[-1]",
+      "def check_first_last_characters(string):\n    return string[0] == string[-1]",
+      "def check_first_last_characters(string):\n    return string[0] == string[-1]",
+      "def check_first_last_characters(string):\n    return string[0] == string[-1]"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "import math\ndef volume_sphere(r):\n  volume=(4/3)*math.pi*r*r*r\n  return volume",
+    "is_human": 1,
+    "rewrites": [
+      "import math\ndef volume_sphere(r):\n  return (4/3)*math.pi*r*r*r",
+      "import math\ndef volume_sphere(r):\n  volume = (4/3)*math.pi*r*r*r\n  return volume",
+      "import math\ndef volume_sphere(r):\n  return (4/3) * math.pi * r**3",
+      "import math\ndef volume_sphere(r):\n  return (4/3)*math.pi*r**3"
+    ],
+    "similarity": 0.8298912361657103
+  },
+  {
+    "code": "def partition_bell_numbers(n):\n    if n == 0:\n        return 1\n    else:\n        return sum(partition_bell_numbers(i) for i in range(n-1))",
+    "is_human": 0,
+    "rewrites": [
+      "def partition_bell_numbers(n):\n    if n == 0:\n        return 1\n    else:\n        return sum(partition_bell_numbers(i) for i in range(n-1))",
+      "def partition_bell_numbers(n):\n    if n == 0:\n        return 1\n    else:\n        return sum(partition_bell_numbers(i) for i in range(n-1))",
+      "def partition_bell_numbers(n):\n    if n == 0:\n        return 1\n    else:\n        return sum(partition_bell_numbers(i) for i in range(n-1))",
+      "def partition_bell_numbers(n):\n    if n == 0:\n        return 1\n    else:\n        return sum(partition_bell_numbers(i) for i in range(n-1))"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "import re\ndef text_match_string(text):\n        patterns = '^\\w+'\n        if re.search(patterns,  text):\n                return 'Found a match!'\n        else:\n                return 'Not matched!'",
+    "is_human": 1,
+    "rewrites": [
+      "import re\ndef text_match_string(text):\n    return 'Found a match!' if re.search('^\\w+',  text) else 'Not matched!'",
+      "import re\ndef text_match_string(text):\n    patterns = '^\\w+'\n    if re.search(patterns,  text):\n        return 'Found a match!'\n    else:\n        return 'Not matched!'",
+      "import re\ndef text_match_string(text):\n    patterns = r'^\\w+'\n    if re.search(patterns, text):\n        return 'Found a match!'\n    else:\n        return 'Not matched!'",
+      "import re\ndef text_match_string(text):\n    patterns = '^\\w+'\n    if re.search(patterns,  text):\n        return 'Found a match!'\n    else:\n        return 'Not matched!'"
+    ],
+    "similarity": 0.8330025568131023
+  },
+  {
+    "code": "def get_repeated_sum(arr):\n    return sum(set(arr))",
+    "is_human": 0,
+    "rewrites": [
+      "def get_repeated_sum(arr):\n    return sum(set(arr))",
+      "def get_repeated_sum(arr):\n    \"\"\"Returns the sum of all unique elements in the input array.\"\"\"\n    arr = set(arr)\n    return sum(arr)",
+      "def get_repeated_sum(arr):\n    return sum(set(arr))",
+      "def get_repeated_sum(arr):\n    return sum(set(arr))"
+    ],
+    "similarity": 0.8743243243243244
+  },
+  {
+    "code": "from operator import itemgetter \ndef index_minimum(test_list):\n  res = min(test_list, key = itemgetter(1))[0]\n  return (res)",
+    "is_human": 1,
+    "rewrites": [
+      "from operator import itemgetter\ndef index_minimum(test_list):\n  return min(test_list, key=itemgetter(1))[0]",
+      "def index_minimum(test_list):\n  return min(test_list, key=lambda x: x[1])[0]",
+      "from operator import itemgetter\ndef index_minimum(test_list):\n  return min(test_list, key = itemgetter(1))[0]",
+      "from operator import itemgetter\ndef index_minimum(test_list):\n  return min(test_list, key=itemgetter(1))[0]"
+    ],
+    "similarity": 0.8212093342994631
+  },
+  {
+    "code": "def merge_dicts(dict1, dict2, dict3):\n    return {**dict1, **dict2, **dict3}",
+    "is_human": 0,
+    "rewrites": [
+      "def merge_dicts(dict1, dict2, dict3):\n    return {**{}, **dict1, **dict2, **dict3}",
+      "def merge_dicts(dict1, dict2, dict3):\n    return {**dict1, **dict2, **dict3}",
+      "def merge_dicts(dict1, dict2, dict3):\n    return {**dict1, **dict2, **dict3}",
+      "def merge_dicts(dict1, dict2, dict3):\n    return {**dict1, **dict2, **dict3}"
+    ],
+    "similarity": 0.990506329113924
+  },
+  {
+    "code": "def max_len_sub( arr, n): \n\tmls=[] \n\tmax = 0\n\tfor i in range(n): \n\t\tmls.append(1) \n\tfor i in range(n): \n\t\tfor j in range(i): \n\t\t\tif (abs(arr[i] - arr[j]) <= 1 and mls[i] < mls[j] + 1): \n\t\t\t\tmls[i] = mls[j] + 1\n\tfor i in range(n): \n\t\tif (max < mls[i]): \n\t\t\tmax = mls[i] \n\treturn max",
+    "is_human": 1,
+    "rewrites": [
+      "def max_len_sub(arr, n):\n    mls = []\n    max = 0\n    for i in range(n):\n        mls.append(1)\n    for i in range(n):\n        for j in range(i):\n            if abs(arr[i] - arr[j]) <= 1 and mls[i] < mls[j] + 1:\n                mls[i] = mls[j] + 1\n    for i in range(n):\n        if max < mls[i]:\n            max = mls[i]\n    return max",
+      "def max_len_sub(arr, n):\n    mls = []\n    for i in range(n):\n        mls.append(1)\n    for i in range(n):\n        for j in range(i):\n            if abs(arr[i] - arr[j]) <= 1 and mls[i] < mls[j] + 1:\n                mls[i] = mls[j] + 1\n    return max(mls)",
+      "def max_len_sub(arr, n):\n    mls = [0] * n\n    max = 0\n    for i in range(n):\n        if arr[i] not in mls:\n            mls.append(1)\n        else:\n            mls[i] += 1\n        for j in range(i):\n            if abs(arr[i] - arr[j]) <= 1 and mls[i] < mls[j] + 1:\n                mls[i] = mls[j] + 1\n    for i in range(n):\n        if max < mls[i]:\n            max = mls[i]\n    return max",
+      "def max_len_sub(arr, n):\n    mls = []\n    max = 0\n    for i in range(n):\n        mls.append(1)\n        for j in range(i):\n            if abs(arr[i] - arr[j]) <= 1 and mls[i] < mls[j] + 1:\n                mls[i] = mls[j] + 1\n    for i in range(n):\n        if max < mls[i]:\n            max = mls[i]\n    return max"
+    ],
+    "similarity": 0.4876608973360701
+  },
+  {
+    "code": "def test_duplicate(arraynums):\n    nums_set = set(arraynums)    \n    return len(arraynums) != len(nums_set)",
+    "is_human": 1,
+    "rewrites": [
+      "def test_duplicate(arraynums):\n    return len(set(arraynums)) < len(arraynums)",
+      "def test_duplicate(arraynums):\n    return len(arraynums) != len(set(arraynums))",
+      "def test_duplicate(arraynums):\n    return len(arraynums) != len(set(arraynums))",
+      "def test_duplicate(arraynums):\n    return len(arraynums) != len(set(arraynums))"
+    ],
+    "similarity": 0.7402353966870097
+  },
+  {
+    "code": "def remove_digits(my_list):\n    return [word for word in my_list if not word.isdigit()]",
+    "is_human": 0,
+    "rewrites": [
+      "def remove_digits(my_list):\n    return [word for word in my_list if not word.isdigit()]",
+      "def remove_digits(my_list):\n    return [word for word in my_list if not word.isdigit()]",
+      "def remove_digits(my_list):\n    return [word for word in my_list if not word.isdigit()]",
+      "def remove_digits(my_list):\n    return [word for word in my_list if not word.isdigit()]"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def max_diff(tuple_list):\n    return max([abs(pair[1] - pair[0]) for pair in tuple_list])",
+    "is_human": 0,
+    "rewrites": [
+      "def max_diff(tuple_list):\n    return max([abs(pair[1] - pair[0]) for pair in tuple_list])",
+      "def max_diff(tuple_list):\n    return max([abs(pair[1] - pair[0]) for pair in tuple_list])",
+      "def max_diff(tuple_list):\n    return max([abs(pair[1] - pair[0]) for pair in tuple_list])",
+      "def max_diff(tuple_list):\n    return max([abs(pair[1] - pair[0]) for pair in tuple_list])"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def find_gcd(x, y): \n\twhile(y): \n\t\tx, y = y, x % y \n\treturn x \ndef get_gcd(l):\n  num1 = l[0]\n  num2 = l[1]\n  gcd = find_gcd(num1, num2)\n  for i in range(2, len(l)):\n    gcd = find_gcd(gcd, l[i])\n  return gcd",
+    "is_human": 1,
+    "rewrites": [
+      "def find_gcd(x, y): \n\twhile(y): \n\t\tx, y = y, x % y \n\treturn x \ndef get_gcd(l):\n  num1 = l[0]\n  num2 = l[1]\n  gcd = find_gcd(num1, num2)\n  for i in range(2, len(l)):\n    gcd = find_gcd(gcd, l[i])\n  return gcd",
+      "def find_gcd(x, y):\n    while y:\n        x, y = y, x % y\n    return x\ndef get_gcd(l):\n    num1 = l[0]\n    num2 = l[1]\n    gcd = find_gcd(num1, num2)\n    for i in range(2, len(l)):\n        gcd = find_gcd(gcd, l[i])\n    return gcd",
+      "def get_gcd(l):\n    gcd = find_gcd(l[0], l[1])\n    for i in range(2, len(l)):\n        gcd = find_gcd(gcd, l[i])\n    return gcd",
+      "def find_gcd(x, y): \n\twhile(y): \n\t\tx, y = y, x % y \n\treturn x \ndef get_gcd(l):\n  num1 = l[0]\n  num2 = l[1]\n  gcd = find_gcd(num1, num2)\n  for i in range(2, len(l)):\n    gcd = find_gcd(gcd, l[i])\n  return gcd"
+    ],
+    "similarity": 0.8858548203375789
+  },
+  {
+    "code": "def count_substrings(s):\n    count = 0\n    for i in range(len(s)):\n        for j in range(i+1, len(s)):\n            if s[i] == s[j]:\n                count += 1\n    return count",
+    "is_human": 0,
+    "rewrites": [
+      "def count_substrings(s):\n    count = 0\n    for i in range(len(s)):\n        for j in range(i+1, len(s)):\n            if s[i] == s[j]:\n                count += 1\n    return count",
+      "def count_substrings(s):\n    count = 0\n    for i in range(len(s)):\n        for j in range(i+1, len(s)):\n            if s[i] == s[j]:\n                count += 1\n    return count",
+      "def count_substrings(s):\n    count = 0\n    for i in range(len(s)):\n        for j in range(i+1, len(s)):\n            if s[i] == s[j]:\n                count += 1\n    return count",
+      "def count_substrings(s):\n    count = 0\n    for i in range(len(s)):\n        for j in range(i+1, len(s)):\n            if s[i] == s[j]:\n                count += 1\n    return count"
+    ],
+    "similarity": 1.0
+  },
+  {
+    "code": "def odd_bit_set_number(n):\n    count = 0;res = 0;temp = n\n    while temp > 0:\n        if count % 2 == 0:\n            res |= (1 << count)\n        count += 1\n        temp >>= 1\n    return (n | res)",
+    "is_human": 1,
+    "rewrites": [
+      "def odd_bit_set_number(n):\n    count = 0; res = 0; temp = n\n    while temp > 0:\n        if count % 2 == 0:\n            res |= (1 << count)\n        count += 1\n        temp >>= 1\n    return (n | res)",
+      "def odd_bit_set_number(n):\n    count = 0; res = 0; temp = n\n    while temp > 0:\n        if count % 2 == 0:\n            res |= (1 << count)\n        count += 1\n        temp >>= 1\n    return (n | res)",
+      "def odd_bit_set_number(n):\n    count = 0\n    res = 0\n    while n > 0:\n        if (n & 1) == 0:\n            res |= 1 << count\n        count += 1\n        n >>= 1\n    return n | res",
+      "def odd_bit_set_number(n):\n    count = 0\n    res = 0\n    while count < 32:\n        if n & (1 << count) == 0:\n            res |= (1 << count)\n        count += 1\n        n >>= 1\n    return (n | res)"
+    ],
+    "similarity": 0.9412584185090286
+  },
+  {
+    "code": "def is_Diff(n): \n    return (n % 11 == 0)",
+    "is_human": 1,
+    "rewrites": [
+      "def is_Diff(n):\n    return n % 11 == 0",
+      "def is_Diff(n): \n    return (n % 11 == 0)",
+      "def is_diff(n):\n    return n % 11 == 0",
+      "def is_Diff(n):\n    return n % 11 == 0"
+    ],
+    "similarity": 0.9651898734177216
+  },
+  {
+    "code": "def get_volume(base, height):\n    return base * height / 2",
+    "is_human": 0,
+    "rewrites": [
+      "def get_volume(base, height):\n    return base * height / 2",
+      "def get_volume(base, height):\n    return base * height / 2",
+      "def get_volume(base, height):\n    return base * height / 2",
+      "def get_volume(base, height):\n    return base * height / 2"
+    ],
+    "similarity": 1.0
+  }
+]
